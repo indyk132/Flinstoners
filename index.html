@@ -1,12 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trol</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header__top">
+            <h1 class="header__logo">
+             <img src="../photos/logo.png" alt="logo">
+            </h1> 
+        </div>
+        
+        </div>
+        <div class="header__searchBar">
+            <div class="header__searchBarBottom input">
+                <input type="text" name="string" class="input__searchBar" 
+                value placeholder="Wpisz nazwę produktu" >
+        
+            </div>
+            
+        </div>
+        <div class="menuBar">
+            <div class="menuBar__stickyBottom box">
+                <div class="box__menu menu">
+                    <a href="#"><i class="icon-widok_01"></i>
+                    <p class="box__item">Menu</p>
+                    </a>
+                </div>
+                <div class="box__menu contact">
+                    <a href="#"><i class="icon-icon_01"></i>
+                        <p class="box__item">Kontakt</p>
+                    </a>
+                </div>
+                <div class="box__menu favorites">
+                    <a href="#"><i class="icon-icon_02"></i>
+                        <p class="box__item">Ulubione</p>
+                    </a>
+                    </div>
+                <div class="box__menu user">
+                    <a href="#"><i class="icon-icon_03"></i>
+                        <p class="box__item">Moje konto</p>
+                    </a>
+                </div>
+                <div class="box__menu shopping__cart">
+                    <a href="#"><i class="icon-icon_06"></i>
+                    <p class="box__item">Koszyk</p></a>
+                </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="hamburger">
+        <div class="hamburger__category">
+            <div class="hamburger__arrow"><button class="icon-icon_05"></button>
+            </div>
+            </button>
+            <span>Kategorie</span>
+            <div class="hamburger__x"><button class="icon-x"></button>
+            </div>
+        </div>
+        <div class="hamburger__searchBar">
+            <div class="hamburger__searchBar input">
+                <input type="text" name="string" class="input__hamburger" 
+                value placeholder="Wpisz nazwę produktu" >
+            </div>
+        </div>
+        <div class="hamburger__menu items">
+            <ul>
+                <li class="items__list products"><a href="#">Produkty</a>
+                <div class="products__ExpanderArrow expander">
+                    <div class="expander__arrow"><button class="icon-icon_04"></button>
+                </div>
+                </li>
+                <li class="items__list producers"><a href="#">Producenci</a></li>
+                <li class="items__list news"><a href="#">Nowości</a></li>
+                <li class="items__list promotion"><a href="#">Promocje</a></li>
+                <li class="items__list recommended"><a href="#">Polecamy</a></li>
+                <li class="items__list about us"><a href="#">O nas</a></li>
+                <li class="items__list inspiration"><a href="#">Inspiracje</a></li>
+            </ul>
+        </div>
+        <div class="hamburger__language language">
+            <span class="language__items">PLN</span>
+            <span class="language__items">polski</span>
+        </div>
+    </div>
+    <div class="hamburger__productsMenu">
+        
+    </div>
+
+    <nav>
+        
+    </nav>
+    <main>
+        <section class="main__swiper slider">
+            <div class="slider_sliders slider__transition">
+            <div class="slider__slide">
+                <img src="./photos/img_02.jpg" alt="2 guys in room" style="width: 100%;">
+            </div>
+            <div class="slider__slide">
+                <img src="./photos/img_08.jpg" alt="mountain" style="width: 100%;">
+            </div>
+            </div>
+            <!-- <div class="main__SliderText text">
+                <div class="text__SliderG">
+                    <p>
+                        <strong>DJI Mavic Air 2</strong>
+                    </p>
+                </div>
+                <div class="text__SliderM"></div>
+            </div> -->
+            <div class="slider__dots">
+                <span class="slider__dot dot" onclick="currentSlide(1)"></span>
+                <span class="slider__dot dot" onclick="currentSlide(2)"></span>
+              </div>
+            
+        </section>
+
+
+
+
+
+        <section class="banner">
+            <div class="banner__emptyField">
+            </div>
+            <div class="banner__galleryHelp">
+                <img src='./photos/img_02.jpg' alt='2 guys in living room'/>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+       
+    </footer>
+    <script src="./js/menuHAMBURGER.js"></script>
+    <script src="./js/pruductsHAMBURGER.js"></script>
+    <script src="./js/slider.js"></script>
 </body>
 </html>
