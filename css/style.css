@@ -130,6 +130,7 @@ header .menuBar {
   background-color: #333333;
   font-family: Metropolis, Arial, sans-serif;
   text-transform: uppercase;
+  z-index: 20;
 }
 header .menuBar .menuBar__stickyBottom {
   position: fixed;
@@ -142,6 +143,7 @@ header .menuBar .menuBar__stickyBottom {
   background-color: white;
   font-size: 23px;
   border: 1px solid #e1e2e3;
+  z-index: 20;
 }
 header .menuBar .box__menu {
   display: flex;
@@ -165,8 +167,10 @@ header .menuBar .shopping__cart {
   position: fixed;
   top: 0;
   left: -800px;
-  height: 87.9%;
+  height: 100%;
   width: 85%;
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
   text-transform: uppercase;
   transition: 0.9s;
@@ -207,7 +211,6 @@ header .menuBar .shopping__cart {
 }
 .hamburger .hamburger__searchBar {
   width: 100%;
-  height: 18%;
   display: inline;
   justify-content: center;
   align-items: center;
@@ -222,11 +225,11 @@ header .menuBar .shopping__cart {
 }
 .hamburger .hamburger__menu {
   width: 95%;
-  height: 55%;
+  height: 52%;
   margin-left: 11px;
 }
 .hamburger .hamburger__menu .items__list {
-  padding: 13px;
+  padding: 3.7%;
   border-bottom: 1px solid #e1e2e3;
   font-family: Metropolis, Arial, sans-serif;
 }
@@ -250,10 +253,9 @@ header .menuBar .shopping__cart {
 .hamburger .hamburger__language {
   width: 50%;
   font-size: 15px;
-  display: block;
-  position: relative;
-  top: 6%;
-  margin: 13px;
+  display: flex;
+  padding: 13px;
+  margin: 1px;
 }
 .hamburger .hamburger__language .language__items {
   border-left: 1px solid #e1e2e3;
@@ -271,7 +273,7 @@ header .menuBar .shopping__cart {
   text-transform: uppercase;
   transition: 0.9s;
   opacity: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 main {
@@ -286,7 +288,7 @@ main .main__swiper {
 }
 main .slider__slide {
   display: none;
-  z-index: 5;
+  z-index: 0;
 }
 main .slider__slide img {
   width: 100%;
@@ -340,4 +342,6 @@ main .slider__dots .slider__transiton {
 .onclick-switch {
   opacity: 1;
   transform: translatex(800px);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
