@@ -153,6 +153,7 @@ header .menuBar .box__menu {
   height: 68px;
   border-right: 1px solid #e1e2e3;
   text-align: center;
+  transition: 0.3s;
 }
 header .menuBar .box__menu .box__item {
   font-size: 11px;
