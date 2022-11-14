@@ -4,7 +4,7 @@ const switch__x = document.querySelector('.switch__x');
 const rotateX= document.querySelector('.menu_rotateIconX');
 function HAMBURGERmenu(){
     hamburger.classList.toggle('onclick-switch');
-    rotateX.style = 'transition: .3s';
+    rotateX.style = 'transition: 1s';
     if(switch__x.classList.contains('icon-widok_01')){
         switch__x.classList.remove('icon-widok_01');
         switch__x.classList.add('icon-x');
