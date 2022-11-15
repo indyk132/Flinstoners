@@ -23,6 +23,12 @@ body{
     }
 
 }
+.container{
+  margin: 0 auto;
+  max-width: 1860px;
+  height: 100%;
+  padding: 0 30px;
+}
 
 header{
     flex-direction: column;
@@ -285,4 +291,98 @@ main{
 .onclick-switch{
   opacity: 1;
   transform: translatex(800px);
+}
+
+.WhyUs {
+
+  .WhyUs__photo {
+    background-image: url(/photos/img_02.jpg);
+    width: 100%;
+    height: 450px;
+    margin-top: 10%;
+    // background-attachment: fixed;
+	  background-size: cover;
+	  background-repeat: no-repeat;
+  }
+
+  .WhyUs__text--field {
+    margin-left: 10%;
+    height: 45%;
+    width: 80%;
+    // background-color: #22262c;
+    // opacity: 0.4;
+    margin-bottom: 10px;
+    overflow: hidden;
+    
+    p {
+      margin-top: 7%;
+      margin-bottom: 3%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 15px;
+    }
+    p.bold {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  .WhyUs__border--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .WhyUs__border--text {
+    height: 2px;
+    width: 70%;
+    background-color: #fff;
+    opacity: 10%;
+  }
+  
+  .WhyUs__border--rectangle {
+    width: 10%;
+    height: 3px;
+    background-color: #F74137;
+  }
+
+  .WhyUs__icons--container {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .WhyUs__icon {
+    width: 135px;
+    height: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+
+  .WhyUs__btn--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .WhyUs__company--info {
+    width: 200px;
+    height: 50px;
+    background-color: #F74137;
+    border: none;
+    margin-top: 5%;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
 }
