@@ -21,6 +21,9 @@ function HAMBURGERmenu(){
 const x = document.querySelector('.icon-x')
 function closeX(){
     hamburger.classList.remove('onclick-switch')
+    switch__x.classList.remove('icon-x');
+    switch__x.classList.add('icon-widok_01');
+    rotateX.style.transform = 'rotate(90deg)';
 }
 
 const arrow = document.querySelector('.icon-icon_05')
