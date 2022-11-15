@@ -5,9 +5,21 @@
   justify-content: center;
   align-items: center;
 }
+@mixin Bulb-text{
+  padding-left: 31px;
+  padding-right: 31px;
+  width: 100%;
+  text-align: center;
+  letter-spacing: -0.28px;
+  color: $TextColor;
+  font-size: $BulbFontS;
+}
+
 $border: 1px solid #e1e2e3;
 $font: 'Metropolis-bold';
 $font2: Metropolis, Arial, sans-serif;
+$BulbFontS: 14px;
+$TextColor: #111111;
 
 *{
   margin: 0;
@@ -25,9 +37,9 @@ body{
 }
 .container{
   margin: 0 auto;
-  max-width: 1860px;
+  max-width: 1920px;
   height: 100%;
-  padding: 0 30px;
+  padding: 0 15px;
 }
 
 header{
@@ -56,6 +68,7 @@ header{
         align-items: center;
         width: 100%;
         height: 100%;
+        padding: 10px;
           .input__searchBar{
             width: 13.875rem;
             height: 2.8125rem;
@@ -66,10 +79,12 @@ header{
       }
     }
     .menuBar{
+      position: fixed;
       background-color: #333333;
       font-family: $font2;
       text-transform: uppercase;
       z-index: 20;
+      margin-left: -15px;
       
       .menuBar__stickyBottom{
           position: fixed;
@@ -171,7 +186,9 @@ header{
       margin-left: 11px;
       .items__list{
         position: relative;
-        padding: 3.7%;
+        height: 40px;
+        display: flex;
+        align-items: center;
         border-bottom: $border;
         font-family: $font2;
         .products__ExpanderArrow{
@@ -237,8 +254,6 @@ main{
       img{
         width: 100%;
         height: 200px;
-        padding-left: 15px;
-        padding-right: 15px;
       }
     }
     .slider__dots{
@@ -268,6 +283,102 @@ main{
       }
       
   }
+  .main__productsBanner{
+    width: 100%;
+    height: 650px;
+
+    .products__TitleHeader{
+      position: relative;
+      width: 100%;
+      height: 10%;
+      font-family: 'Metropolis-Bold';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: $border;
+      
+    }
+    .products__TitleHeader::after{
+      background-color: #f74137;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 3px;
+      position: absolute;
+      width: 2.5rem;
+    }
+    .products__container{
+    .products__sliderBulbs{
+      display: flex;
+      column-gap: 10px;
+      max-width: 100%;
+      overflow: auto;
+      width: 1000px;
+      
+      .products__sliderBulbContainer{
+        min-width: 320px;
+        width: 300px;
+        height: 520px;
+        background-color: #ffffff;
+        margin-top: 31px;
+        
+        
+      .products__picutreTile{
+        width: 100%;
+        height: 50%;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .products__producentName{
+        height: 20px;
+        @include Bulb-text;
+        .brand__Name{
+          font-family: $font2;
+        }
+      }
+      .products__productTileName{
+        @include Bulb-text;
+        margin-top: 60px;
+        text-transform: uppercase;
+        padding: 5px;
+        .bulb__Name{
+          font-family: $font;
+        }
+      }
+      .products__productTileCode{
+        @include Bulb-text;
+        .productCode__Code{
+          font-family: $font2;
+          font-size: $BulbFontS;
+          color: $TextColor;
+          letter-spacing: -0.28px;
+        }
+      }
+      .products__productTilePrice{
+        @include Bulb-text;
+        height: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .price__startingPrice{
+          font-family: $font2;
+          color: #a3a3a3;
+          text-decoration: line-through;
+          padding: 3px;
+        }
+        .price__promotionPrice{
+          font-family: $font;
+          padding: 3px;
+        }
+      }
+      }
+    }
+  }
+  }
+
   }
   .banner__emptyField{
     width: 100%;
@@ -282,8 +393,6 @@ main{
 
     img{
       width: 100%;
-      padding-left: 15px;
-      padding-right: 15px;
     }
   }
 
