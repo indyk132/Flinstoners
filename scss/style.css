@@ -96,7 +96,6 @@ header {
   font-family: "Metropolis-bold";
   text-transform: uppercase;
 }
-
 header .header__top {
   display: flex;
   justify-content: center;
@@ -105,17 +104,14 @@ header .header__top {
   margin-top: 8px;
   border-bottom: 1px solid #e1e2e3;
 }
-
 header .header__top img {
   display: flex;
   width: 100%;
 }
-
 header .header__searchBar {
   width: 100%;
   height: 50%;
 }
-
 header .header__searchBar .header__searchBarBottom {
   display: flex;
   justify-content: center;
@@ -123,7 +119,6 @@ header .header__searchBar .header__searchBarBottom {
   width: 100%;
   height: 100%;
 }
-
 header .header__searchBar .header__searchBarBottom .input__searchBar {
   width: 13.875rem;
   height: 2.8125rem;
@@ -131,14 +126,12 @@ header .header__searchBar .header__searchBarBottom .input__searchBar {
   font-size: 17px;
   border: 1px solid rgba(50, 57, 68, 0.3);
 }
-
 header .menuBar {
   background-color: #333333;
   font-family: Metropolis, Arial, sans-serif;
   text-transform: uppercase;
   z-index: 20;
 }
-
 header .menuBar .menuBar__stickyBottom {
   position: fixed;
   display: flex;
@@ -152,7 +145,6 @@ header .menuBar .menuBar__stickyBottom {
   border: 1px solid #e1e2e3;
   z-index: 20;
 }
-
 header .menuBar .box__menu {
   display: flex;
   justify-content: center;
@@ -163,13 +155,11 @@ header .menuBar .box__menu {
   text-align: center;
   transition: 0.3s;
 }
-
 header .menuBar .box__menu .box__item {
   font-size: 11px;
   padding: 3px;
   margin-bottom: -4px;
 }
-
 header .menuBar .shopping__cart {
   border: 0;
 }
@@ -187,7 +177,6 @@ header .menuBar .shopping__cart {
   opacity: 0;
   z-index: 1;
 }
-
 .hamburger .hamburger__category {
   display: flex;
   justify-content: start;
@@ -198,40 +187,34 @@ header .menuBar .shopping__cart {
   border-bottom: 1px solid #e1e2e3;
   font-family: "Metropolis-bold";
 }
-
 .hamburger .hamburger__category .hamburger__arrow {
   width: 10%;
   margin-left: 5%;
   margin-right: 4%;
 }
-
 .hamburger .hamburger__category .hamburger__arrow .icon-icon_05 {
   font-size: 13px;
   border: 0;
   background-color: #ffffff;
 }
-
 .hamburger .hamburger__category .hamburger__x {
   width: 100%;
   display: flex;
   justify-content: end;
   margin: 13px;
 }
-
 .hamburger .hamburger__category .hamburger__x .icon-x {
   padding: 13px;
   font-size: 10px;
   background-color: #f3f1f1;
   border: 0;
 }
-
 .hamburger .hamburger__searchBar {
   width: 100%;
   display: inline;
   justify-content: center;
   align-items: center;
 }
-
 .hamburger .hamburger__searchBar .input__hamburger {
   height: 45px;
   width: 92%;
@@ -240,20 +223,17 @@ header .menuBar .shopping__cart {
   margin: 10px;
   border: 1px solid rgba(50, 57, 68, 0.3);
 }
-
 .hamburger .hamburger__menu {
   width: 95%;
   height: 52%;
   margin-left: 11px;
 }
-
 .hamburger .hamburger__menu .items__list {
   position: relative;
   padding: 3.7%;
   border-bottom: 1px solid #e1e2e3;
   font-family: Metropolis, Arial, sans-serif;
 }
-
 .hamburger .hamburger__menu .items__list .products__ExpanderArrow {
   position: fixed;
   left: 0;
@@ -261,19 +241,16 @@ header .menuBar .shopping__cart {
   display: flex;
   justify-content: end;
 }
-
 .hamburger .hamburger__menu .items__list .products__ExpanderArrow .expander__arrow {
   position: fixed;
   top: 29%;
   padding: 10px;
   border-left: 1px solid #e1e2e3;
 }
-
 .hamburger .hamburger__menu .items__list .products__ExpanderArrow .expander__arrow .icon-icon_04 {
   background-color: #ffffff;
   border: 0;
 }
-
 .hamburger .hamburger__language {
   width: 50%;
   font-size: 15px;
@@ -282,7 +259,6 @@ header .menuBar .shopping__cart {
   margin: 1px;
   background-color: #ffffff;
 }
-
 .hamburger .hamburger__language .language__items {
   border-left: 1px solid #e1e2e3;
   padding-left: 6px;
@@ -307,25 +283,21 @@ main {
   height: 1500px;
   background-color: #f2f3f4;
 }
-
 main .main__swiper {
   width: 100%;
   position: relative;
   margin: 0 auto;
 }
-
 main .slider__slide {
   display: none;
   z-index: 0;
 }
-
 main .slider__slide img {
   width: 100%;
   height: 200px;
   padding-left: 15px;
   padding-right: 15px;
 }
-
 main .slider__dots {
   position: absolute;
   text-align: center;
@@ -335,7 +307,6 @@ main .slider__dots {
   justify-content: center;
   padding: 10px;
 }
-
 main .slider__dots .slider__dot {
   cursor: pointer;
   height: 15px;
@@ -346,11 +317,9 @@ main .slider__dots .slider__dot {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 main .slider__dots .active, main .slider__dots .slider__dot:hover {
   background-color: #f74137;
 }
-
 main .slider__dots .slider__transiton {
   transition: 1s;
 }
@@ -366,7 +335,6 @@ main .slider__dots .slider__transiton {
   display: flex;
   justify-content: center;
 }
-
 .banner__galleryHelp img {
   width: 100%;
   padding-left: 15px;
@@ -376,6 +344,4 @@ main .slider__dots .slider__transiton {
 .onclick-switch {
   opacity: 1;
   transform: translatex(800px);
-} /*# sourceMappingURL=style.css.map */
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
