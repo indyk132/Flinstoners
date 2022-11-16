@@ -336,6 +336,11 @@ main .slider__dots .slider__transiton {
 main .banner__container {
   height: 100%;
 }
+@media (min-width: 768px) {
+  main .banner__container {
+    display: flex;
+  }
+}
 main .banner__container img {
   width: 100%;
 }
@@ -350,10 +355,9 @@ main .banner__container .banner__item {
 }
 main .banner__container .banner__item .banner__textContainer {
   position: absolute;
-  left: -16%;
+  left: 0%;
   top: -11%;
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -375,7 +379,7 @@ main .banner__container .banner__item .banner__textContainer p .text {
 main .banner__container .banner__item .banner__textContainer p .seeMore {
   position: absolute;
   bottom: 12%;
-  left: 22%;
+  left: 11%;
   display: flex;
   justify-content: center;
   align-items: center;
