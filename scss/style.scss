@@ -5,14 +5,14 @@
 	justify-content: center;
 	align-items: center;
 }
-@mixin Bulb-text{
-  padding-left: 31px;
-  padding-right: 31px;
-  width: 100%;
-  text-align: center;
-  letter-spacing: -0.28px;
-  color: $TextColor;
-  font-size: $BulbFontS;
+@mixin Bulb-text {
+	padding-left: 31px;
+	padding-right: 31px;
+	width: 100%;
+	text-align: center;
+	letter-spacing: -0.28px;
+	color: $TextColor;
+	font-size: $BulbFontS;
 }
 
 $border: 1px solid #e1e2e3;
@@ -33,11 +33,11 @@ body {
 		color: black;
 	}
 }
-.container{
-  margin: 0 auto;
-  max-width: 1920px;
-  height: 100%;
-  padding: 0 15px;
+.container {
+	margin: 0 auto;
+	max-width: 1920px;
+	height: 100%;
+	padding: 0 15px;
 }
 
 header {
@@ -139,100 +139,100 @@ header {
 			margin-left: 5%;
 			margin-right: 4%;
 
-      .icon-icon_05{
-        font-size: 13px;
-        border: 0;
-        background-color: #ffffff;
-      }
-      }
-      .hamburger__x{
-        width: 100%;
-        display: flex;
-        justify-content: end;
-        margin: 13px;
-      .icon-x{
-        padding: 13px;
-        font-size: 10px;
-        background-color: #f3f1f1;
-        border: 0;
-      }
-    }
-    }
-    .hamburger__searchBar{
-      width: 100%;
-      display: inline;
-      justify-content: center;
-      align-items: center;
-      .input__hamburger{
-        height: 45px;
-        width: 92%;
-        text-indent: 20px;
-        font-size: 15px;
-        margin: 10px;
-        border: 1px solid rgba(50, 57, 68,.3);
-      }
-    }
-    .hamburger__menu{
-      width: 95%;
-      height: 52%;
-      margin-left: 11px;
-      .items__list{
-        position: relative;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        border-bottom: $border;
-        font-family: $font2;
-        .products__ExpanderArrow{
-          position: fixed;
-          left: 0;
-          width: 100%;
-          display: flex;
-          justify-content: end;
-          .expander__arrow{
-            position: fixed;
-            top: 29%;
-            padding: 10px;
-            border-left: $border;
-            .icon-icon_04{
-              background-color: #ffffff;
-              border: 0;
-            }
-          }
-        }
-      }
-    }
-    .hamburger__language{
-      width: 50%;
-      font-size: 15px;
-      display: flex;
-      padding: 13px;
-      margin: 1px;
-      background-color: #ffffff;
-      .language__items{
-        border-left: $border;
-        padding-left: 6px;
-        font-family: $font2; 
-      }
-    }
-  }
-  .hamburger__productsMenu{
-    position: fixed;
-    top: 0;
-    left: -800px;
-    height: 87.9%;
-    width: 85%;
-    background-color: #ffffff;
-    text-transform: uppercase;
-    transition: 0.9s;
-    opacity: 0;
-    z-index: 2;
-  }
-  
-main{
-  width: 100%;
-  height: 1500px;
-  background-color: #f2f3f4;
+			.icon-icon_05 {
+				font-size: 13px;
+				border: 0;
+				background-color: #ffffff;
+			}
+		}
+		.hamburger__x {
+			width: 100%;
+			display: flex;
+			justify-content: end;
+			margin: 13px;
+			.icon-x {
+				padding: 13px;
+				font-size: 10px;
+				background-color: #f3f1f1;
+				border: 0;
+			}
+		}
+	}
+	.hamburger__searchBar {
+		width: 100%;
+		display: inline;
+		justify-content: center;
+		align-items: center;
+		.input__hamburger {
+			height: 45px;
+			width: 92%;
+			text-indent: 20px;
+			font-size: 15px;
+			margin: 10px;
+			border: 1px solid rgba(50, 57, 68, 0.3);
+		}
+	}
+	.hamburger__menu {
+		width: 95%;
+		height: 52%;
+		margin-left: 11px;
+		.items__list {
+			position: relative;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			border-bottom: $border;
+			font-family: $font2;
+			.products__ExpanderArrow {
+				position: fixed;
+				left: 0;
+				width: 100%;
+				display: flex;
+				justify-content: end;
+				.expander__arrow {
+					position: fixed;
+					top: 29%;
+					padding: 10px;
+					border-left: $border;
+					.icon-icon_04 {
+						background-color: #ffffff;
+						border: 0;
+					}
+				}
+			}
+		}
+	}
+	.hamburger__language {
+		width: 50%;
+		font-size: 15px;
+		display: flex;
+		padding: 13px;
+		margin: 1px;
+		background-color: #ffffff;
+		.language__items {
+			border-left: $border;
+			padding-left: 6px;
+			font-family: $font2;
+		}
+	}
+}
+.hamburger__productsMenu {
+	position: fixed;
+	top: 0;
+	left: -800px;
+	height: 87.9%;
+	width: 85%;
+	background-color: #ffffff;
+	text-transform: uppercase;
+	transition: 0.9s;
+	opacity: 0;
+	z-index: 2;
+}
+
+main {
+	width: 100%;
+	height: 1500px;
+	background-color: #f2f3f4;
 
 	.main__swiper {
 		width: 100%;
@@ -352,6 +352,101 @@ main{
 			width: 100%;
 		}
 	}
+	.main__productsBanner{
+		width: 100%;
+		height: 650px;
+	
+		.products__TitleHeader{
+		  position: relative;
+		  width: 100%;
+		  height: 10%;
+		  font-family: 'Metropolis-Bold';
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  border-bottom: $border;
+		  
+		}
+		.products__TitleHeader::after{
+		  background-color: #f74137;
+		  bottom: 0;
+		  content: "";
+		  display: block;
+		  height: 3px;
+		  position: absolute;
+		  width: 2.5rem;
+		}
+		.products__container{
+		.products__sliderBulbs{
+		  display: flex;
+		  column-gap: 10px;
+		  max-width: 100%;
+		  overflow: auto;
+		  width: 1000px;
+		  
+		  .products__sliderBulbContainer{
+			min-width: 320px;
+			width: 300px;
+			height: 520px;
+			background-color: #ffffff;
+			margin-top: 31px;
+			
+			
+		  .products__picutreTile{
+			width: 100%;
+			height: 50%;
+			img{
+			  width: 100%;
+			  height: 100%;
+			}
+		  }
+		  .products__producentName{
+			height: 20px;
+			@include Bulb-text;
+			.brand__Name{
+			  font-family: $font2;
+			}
+		  }
+		  .products__productTileName{
+			@include Bulb-text;
+			margin-top: 60px;
+			text-transform: uppercase;
+			padding: 5px;
+			.bulb__Name{
+			  font-family: $font;
+			}
+		  }
+		  .products__productTileCode{
+			@include Bulb-text;
+			.productCode__Code{
+			  font-family: $font2;
+			  font-size: $BulbFontS;
+			  color: $TextColor;
+			  letter-spacing: -0.28px;
+			}
+		  }
+		  .products__productTilePrice{
+			@include Bulb-text;
+			height: 15%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.price__startingPrice{
+			  font-family: $font2;
+			  color: #a3a3a3;
+			  text-decoration: line-through;
+			  padding: 3px;
+			}
+			.price__promotionPrice{
+			  font-family: $font;
+			  padding: 3px;
+			}
+		  }
+		  }
+		}
+	  }
+	  }
 }
 .onclick-switch {
 	opacity: 1;
