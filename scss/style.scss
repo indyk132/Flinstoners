@@ -12,13 +12,13 @@
 	text-align: center;
 	letter-spacing: -0.28px;
 	color: $TextColor;
-	font-size: $BulbFontS;
+	font-size: $FontS;
 }
 
-$border: 1px solid #e1e2e3;
+$border: 1px solid rgba(225, 226, 227, 0.2);
 $font: "Metropolis-bold";
 $font2: Metropolis, Arial, sans-serif;
-$BulbFontS: 14px;
+$FontS: 14px;
 $TextColor: #111111;
 
 * {
@@ -57,6 +57,9 @@ header {
 		}
 	}
 	.header__searchBar {
+		@media (min-width: 768px){
+			display: none;
+		}
 		width: 100%;
 		height: 50%;
 		.header__searchBarBottom {
@@ -81,6 +84,9 @@ header {
 		z-index: 20;
 
 		.menuBar__stickyBottom {
+			@media (min-width: 768px) {
+				display: none;
+			}
 			position: fixed;
 			@include centering;
 			align-content: flex-start;
@@ -90,6 +96,7 @@ header {
 			font-size: 23px;
 			border: $border;
 			z-index: 20;
+			left: 0;
 		}
 		.box__menu {
 			@include centering;
@@ -216,18 +223,18 @@ header {
 		}
 	}
 }
-.hamburger__productsMenu {
-	position: fixed;
-	top: 0;
-	left: -800px;
-	height: 87.9%;
-	width: 85%;
-	background-color: #ffffff;
-	text-transform: uppercase;
-	transition: 0.9s;
-	opacity: 0;
-	z-index: 2;
-}
+// .hamburger__productsMenu {
+// 	position: fixed;
+// 	top: 0;
+// 	left: -800px;
+// 	height: 87.9%;
+// 	width: 85%;
+// 	background-color: #ffffff;
+// 	text-transform: uppercase;
+// 	transition: 0.9s;
+// 	opacity: 0;
+// 	z-index: 2;
+// }
 
 main {
 	width: 100%;
@@ -391,10 +398,11 @@ main {
 		}
         position: absolute;
         display: flex;
-        width: 100%;
-        height: 100%;
-        align-items: center;  
+		width: 100%;
+        height: 0.1px;
         opacity: 0.5;
+		top: 250px;
+		
         .button__leftArrow{
           position: absolute;
           left: 0;
@@ -403,6 +411,7 @@ main {
           color: #ffffff;
           width: 50px;
           height: 50px;
+		  
         }
         .button__rightArrow{
           position: absolute;
@@ -422,29 +431,36 @@ main {
 		  column-gap: 10px;
 		  max-width: 100%;
 		  overflow: auto;
+		  
+		  
       
 		  .products__sliderBulbContainer{
         @media (min-width: 768px){
           min-width: auto;
+		  a:hover{
+			background-color: #111111;
+		}
         }
 			min-width: 280px;
-			height: 480px;
+			height: 500px;
 			background-color: #ffffff;
 			margin-top: 31px;
       		width: 100%;
+			
 			
 			
 		  .products__picutreTile{
 			width: 100%;
 			height: 50%;
 			img{
-			  width: 100%;
-			  height: 100%;
+				margin-top: 50px;
+			  	width: 100%;
+			  	height: 100%;
 			}
 		  }
 		  .products__productTileName{
 			@include Bulb-text;
-			margin-top: 60px;
+			margin-top: 110px;
 			text-transform: uppercase;
 			padding: 5px;
 			.bulb__Name{
@@ -455,7 +471,7 @@ main {
 			@include Bulb-text;
 			.productCode__Code{
 			  font-family: $font2;
-			  font-size: $BulbFontS;
+			  font-size: $FontS;
 			  color: $TextColor;
 			  letter-spacing: -0.28px;
 			}
@@ -479,6 +495,7 @@ main {
 			}
 		  }
 		  }
+		  
 		}
 	  }
 	  }
@@ -599,3 +616,112 @@ main {
 	}
   
   }
+  footer{
+	.footer__container{
+		@media (min-width: 768px) {
+			height: 550px;
+		}
+	position: relative;
+	width: 100%;
+	height: 1350px;
+	background-color: #393E40;
+	bottom: 0;
+	}
+
+
+
+	.footer__containerList{
+		@media (min-width: 768px) {
+			display: flex;
+			
+		}
+		width: 100%;
+		height: 330px;
+		font-size: $FontS;
+		color: #ffffff;
+			
+		.list__element{
+			@media (min-width: 768px) {
+				width: 25%;
+				height: 320px;
+			}
+			padding: 15px;
+			
+			
+			.information__heading{
+				width: 100%;
+				color: #ffffff;	
+				border-bottom: $border;
+				font-family: $font;
+				font-size: 14px;
+				text-transform: uppercase;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				.item__expandArrow{
+					@media (min-width: 768px) {
+						display: none;
+					}
+					position: absolute;
+					right: 0;
+					
+					margin-right: 15px;
+					background-color: #393E40;
+					border: 0;
+					transform: rotate(90deg);
+					.icon-icon_05{
+						color: #ffffff;
+						font-size: 17px;
+						}
+					}
+					
+				}
+				
+				
+			.item__listContainer{
+				@media (min-width: 768px) {
+					margin-top: 30px;
+				}
+				width: 100%;
+				height: 235px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				.elements__list{
+					@media (min-width: 768px) {
+						padding-top: 20px;
+						padding-bottom: 20px;
+					}
+					position: relative;
+					font-family: $font2;
+					display: flex;
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+			}
+	}
+	}
+	.footer__copyright{
+		@media (min-width: 768px){
+			margin: 0;
+			flex-direction: row;
+			height: 10px;
+		}
+		position: absolute;
+		@include centering;
+		bottom: 0;
+		width: 100%;
+		height: 100px;
+		background-color: #ffffff;
+		margin-bottom: 70px;
+		padding: 30px 15px 30px;
+		flex-direction: column;
+
+		.cpright__element{
+			font-family: $font2;
+			font-size: $FontS;
+			color: $TextColor;
+			margin: 0px 0px 3px;
+			text-align: center;
+			padding: 5px;
+		}
+	}
+}
