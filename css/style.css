@@ -182,8 +182,7 @@ header .menuBar .shopping__cart {
   background-color: #ffffff;
   text-transform: uppercase;
   opacity: 0;
-  z-index: 0;
-  transition: 1s;
+  z-index: 2;
 }
 .hamburger .hamburger__category {
   display: flex;
@@ -275,9 +274,16 @@ header .menuBar .shopping__cart {
   font-family: Metropolis, Arial, sans-serif;
 }
 
-.onclick-switch {
-  opacity: 1;
-  transform: translateX(800px);
+.hamburger__productsMenu {
+  position: fixed;
+  top: 0;
+  left: -800px;
+  height: 87.9%;
+  width: 85%;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  transition: 0.9s;
+  opacity: 0;
   z-index: 2;
 }
 
@@ -364,32 +370,16 @@ main .banner__container .banner__item .banner__textContainer p {
   padding-left: 5%;
 }
 main .banner__container .banner__item .banner__textContainer p .heading {
-  position: absolute;
-  bottom: 49%;
-  left: 10%;
   font-weight: bold;
-  font-size: 1.6rem;
-}
-@media (min-width: 768px) {
-  main .banner__container .banner__item .banner__textContainer p .heading {
-    font-size: 1.1rem;
-  }
+  font-size: 1.5em;
 }
 main .banner__container .banner__item .banner__textContainer p .text {
-  position: absolute;
-  bottom: 41%;
-  left: 10%;
-  font-size: 1.1rem;
-}
-@media (min-width: 768px) {
-  main .banner__container .banner__item .banner__textContainer p .text {
-    font-size: 0.6em;
-  }
+  font-size: 1.2em;
 }
 main .banner__container .banner__item .banner__textContainer p .seeMore {
   position: absolute;
   bottom: 12%;
-  left: 10%;
+  left: 11%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -397,19 +387,9 @@ main .banner__container .banner__item .banner__textContainer p .seeMore {
   width: 40%;
   background-color: transparent;
   border: 1px solid #e1e2e3;
-  font-size: 0.9em;
+  font-size: 0.8em;
   transition: 0.3s;
-}
-@media (min-width: 320px) {
-  main .banner__container .banner__item .banner__textContainer p .seeMore {
-    background-color: tomato;
-  }
-}
-@media (min-width: 768px) {
-  main .banner__container .banner__item .banner__textContainer p .seeMore {
-    background-color: transparent;
-    font-size: 1em;
-  }
+  background-color: tomato;
 }
 main .banner__container .banner__item .banner__textContainer p .seeMore:hover {
   background: tomato;
@@ -572,6 +552,11 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
   padding: 3px;
 }
 
+.onclick-switch {
+  opacity: 1;
+  transform: translatex(800px);
+}
+
 .WhyUs .WhyUs__photo {
   position: relative;
   width: 100%;
@@ -590,14 +575,14 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .WhyUs .WhyUs__text--field {
   position: relative;
   margin-left: 10%;
   margin-bottom: 10px;
   height: 35%;
-  width: 75%;
+  width: 80%;
   overflow: hidden;
 }
 .WhyUs .WhyUs__text--field p {
@@ -630,19 +615,19 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
 }
 .WhyUs .WhyUs__border--text {
   height: 2px;
-  width: 80%;
+  width: 100%;
   background-color: #fff;
   opacity: 40%;
   z-index: 10;
 }
 .WhyUs .WhyUs__border--rectangle {
-  width: 10%;
+  width: 15%;
   height: 3px;
   background-color: #F74137;
-  z-index: 10;
+  z-index: 1;
 }
 .WhyUs .WhyUs__icons--container {
-  height: 25%;
+  height: 27%;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -662,7 +647,7 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
 }
 @media (min-width: 768px) {
   .WhyUs .WhyUs__icon {
-    width: 250px;
+    width: 265px;
     height: 140px;
   }
 }
@@ -671,19 +656,20 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
   justify-content: center;
   align-items: center;
 }
+.WhyUs .WhyUs__btn--container a {
+  z-index: 1;
+  margin-top: 2.5%;
+}
 .WhyUs .WhyUs__company--info {
   width: 200px;
   height: 50px;
   background-color: #F74137;
   border: none;
-  margin-top: 3%;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
   font-size: 12px;
-  opacity: 1;
   cursor: pointer;
-  z-index: 10;
 }
 
 /*# sourceMappingURL=style.css.map */
