@@ -492,36 +492,34 @@ main {
   
 	.WhyUs__photo {
 	  position: relative;
-	  background-image: url(/photos/img_02.jpg);
 	  width: 100%;
 	  height: 550px;
 	  margin-top: 10%;
+	  background-image: url(/photos/img_02.jpg);
 	  background-attachment: fixed;
-		background-size: cover;
-		background-repeat: no-repeat;
+	  background-size: cover;
+	  background-repeat: no-repeat;
 	  background-position: 65%;
 	}
-  
 	
-	.WhyUs__shadow::before {
-	  content: "";
-	  position: absolute;
-	  top: 0px;
-	  right: 0px;
-	  bottom: 0px;
-	  left: 0px;
-	  background-color: rgba(0,0,0,0.50);
-	  opacity: 50%;
+	
+	.WhyUs__photo::before {
+		content: "";
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		background-color: rgba(0,0,0,0.30);
 	}
   
 	.WhyUs__text--field {
+		position: relative;
 	  margin-left: 10%;
 	  height: 35%;
 	  width: 80%;
 	  // margin-bottom: 10px;
 	  overflow: hidden;
-	  // background-color: lime;
-	  
 	  p {
 		margin-top: 4%;
 		margin-bottom: 3%;
@@ -548,14 +546,14 @@ main {
 	  width: 80%;
 	  background-color: #fff;
 	  opacity: 40%;
-	  z-index: 100;
+	  z-index: 10;
 	}
 	
 	.WhyUs__border--rectangle {
-	  width: 73%;
+	  width: 10%;
 	  height: 3px;
 	  background-color: #F74137;
-	  z-index: 100;
+	  z-index: 10;
 	}
   
 	.WhyUs__icons--container {
@@ -576,7 +574,7 @@ main {
 	  align-items: center;
 	  justify-content: center;
 	  color: #fff;
-	  z-index: 100;
+	  z-index: 10;
 	}
   
 	.WhyUs__btn--container {
