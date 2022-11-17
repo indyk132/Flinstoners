@@ -336,6 +336,11 @@ main .slider__dots .slider__transiton {
 main .banner__container {
   height: 100%;
 }
+@media (min-width: 768px) {
+  main .banner__container {
+    display: flex;
+  }
+}
 main .banner__container img {
   width: 100%;
 }
@@ -350,10 +355,9 @@ main .banner__container .banner__item {
 }
 main .banner__container .banner__item .banner__textContainer {
   position: absolute;
-  left: -16%;
+  left: 0%;
   top: -11%;
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -375,7 +379,7 @@ main .banner__container .banner__item .banner__textContainer p .text {
 main .banner__container .banner__item .banner__textContainer p .seeMore {
   position: absolute;
   bottom: 12%;
-  left: 22%;
+  left: 11%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -423,19 +427,67 @@ main .main__productsBanner .products__TitleHeader::after {
   position: absolute;
   width: 2.5rem;
 }
+main .main__productsBanner .products__container {
+  position: relative;
+}
+main .main__productsBanner .products__container .products__sliderButtons {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  opacity: 0.5;
+}
+@media (min-width: 320px) {
+  main .main__productsBanner .products__container .products__sliderButtons {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  main .main__productsBanner .products__container .products__sliderButtons {
+    display: flex;
+  }
+}
+main .main__productsBanner .products__container .products__sliderButtons .button__leftArrow {
+  position: absolute;
+  left: 0;
+  border: 1px solid #e1e2e3;
+  background-color: #c1c2c6;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+}
+main .main__productsBanner .products__container .products__sliderButtons .button__rightArrow {
+  position: absolute;
+  right: 0;
+  border: 1px solid #e1e2e3;
+  background-color: #c1c2c6;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+}
 main .main__productsBanner .products__container .products__sliderBulbs {
   display: flex;
   column-gap: 10px;
   max-width: 100%;
   overflow: auto;
-  width: 1000px;
+}
+@media (min-width: 768px) {
+  main .main__productsBanner .products__container .products__sliderBulbs {
+    overflow: hidden;
+  }
 }
 main .main__productsBanner .products__container .products__sliderBulbs .products__sliderBulbContainer {
-  min-width: 320px;
-  width: 300px;
-  height: 520px;
+  min-width: 280px;
+  height: 480px;
   background-color: #ffffff;
   margin-top: 31px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  main .main__productsBanner .products__container .products__sliderBulbs .products__sliderBulbContainer {
+    min-width: auto;
+  }
 }
 main .main__productsBanner .products__container .products__sliderBulbs .products__sliderBulbContainer .products__picutreTile {
   width: 100%;
@@ -444,19 +496,6 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
 main .main__productsBanner .products__container .products__sliderBulbs .products__sliderBulbContainer .products__picutreTile img {
   width: 100%;
   height: 100%;
-}
-main .main__productsBanner .products__container .products__sliderBulbs .products__sliderBulbContainer .products__producentName {
-  height: 20px;
-  padding-left: 31px;
-  padding-right: 31px;
-  width: 100%;
-  text-align: center;
-  letter-spacing: -0.28px;
-  color: #111111;
-  font-size: 14px;
-}
-main .main__productsBanner .products__container .products__sliderBulbs .products__sliderBulbContainer .products__producentName .brand__Name {
-  font-family: Metropolis, Arial, sans-serif;
 }
 main .main__productsBanner .products__container .products__sliderBulbs .products__sliderBulbContainer .products__productTileName {
   padding-left: 31px;
@@ -519,48 +558,66 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
 }
 
 .WhyUs .WhyUs__photo {
-  background-image: url(/photos/img_02.jpg);
+  position: relative;
   width: 100%;
-  height: 450px;
+  height: 550px;
   margin-top: 10%;
+  background-image: url(/photos/img_02.jpg);
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 65%;
+}
+.WhyUs .WhyUs__photo::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .WhyUs .WhyUs__text--field {
+  position: relative;
   margin-left: 10%;
-  height: 45%;
+  height: 35%;
   width: 80%;
-  margin-bottom: 10px;
   overflow: hidden;
 }
 .WhyUs .WhyUs__text--field p {
-  margin-top: 7%;
+  margin-top: 4%;
   margin-bottom: 3%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #fff;
   font-size: 15px;
+  font-family: Metropolis, Arial, sans-serif;
+  text-align: center;
 }
 .WhyUs .WhyUs__text--field p.bold {
+  margin-top: 5%;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
+  font-family: "Metropolis-bold";
 }
 .WhyUs .WhyUs__border--container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .WhyUs .WhyUs__border--text {
   height: 2px;
-  width: 70%;
+  width: 80%;
   background-color: #fff;
-  opacity: 10%;
+  opacity: 40%;
+  z-index: 10;
 }
 .WhyUs .WhyUs__border--rectangle {
   width: 10%;
   height: 3px;
-  background-color: #f74137;
+  background-color: #F74137;
+  z-index: 10;
 }
 .WhyUs .WhyUs__icons--container {
   height: 25%;
@@ -568,32 +625,37 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 5px;
 }
 .WhyUs .WhyUs__icon {
-  width: 135px;
+  width: 150px;
   height: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #fff;
+  z-index: 10;
 }
 .WhyUs .WhyUs__btn--container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .WhyUs .WhyUs__company--info {
   width: 200px;
   height: 50px;
-  background-color: #f74137;
+  background-color: #F74137;
   border: none;
-  margin-top: 5%;
+  margin-top: 3%;
   text-align: center;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   font-size: 12px;
+  opacity: 1;
+  cursor: pointer;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=style.css.map */
