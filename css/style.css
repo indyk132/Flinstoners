@@ -182,7 +182,8 @@ header .menuBar .shopping__cart {
   background-color: #ffffff;
   text-transform: uppercase;
   opacity: 0;
-  z-index: 2;
+  z-index: 0;
+  transition: 1s;
 }
 .hamburger .hamburger__category {
   display: flex;
@@ -274,16 +275,9 @@ header .menuBar .shopping__cart {
   font-family: Metropolis, Arial, sans-serif;
 }
 
-.hamburger__productsMenu {
-  position: fixed;
-  top: 0;
-  left: -800px;
-  height: 87.9%;
-  width: 85%;
-  background-color: #ffffff;
-  text-transform: uppercase;
-  transition: 0.9s;
-  opacity: 0;
+.onclick-switch {
+  opacity: 1;
+  transform: translateX(800px);
   z-index: 2;
 }
 
@@ -370,16 +364,32 @@ main .banner__container .banner__item .banner__textContainer p {
   padding-left: 5%;
 }
 main .banner__container .banner__item .banner__textContainer p .heading {
+  position: absolute;
+  bottom: 49%;
+  left: 10%;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.6rem;
+}
+@media (min-width: 768px) {
+  main .banner__container .banner__item .banner__textContainer p .heading {
+    font-size: 1.1rem;
+  }
 }
 main .banner__container .banner__item .banner__textContainer p .text {
-  font-size: 1.2em;
+  position: absolute;
+  bottom: 41%;
+  left: 10%;
+  font-size: 1.1rem;
+}
+@media (min-width: 768px) {
+  main .banner__container .banner__item .banner__textContainer p .text {
+    font-size: 0.6em;
+  }
 }
 main .banner__container .banner__item .banner__textContainer p .seeMore {
   position: absolute;
   bottom: 12%;
-  left: 11%;
+  left: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -387,9 +397,19 @@ main .banner__container .banner__item .banner__textContainer p .seeMore {
   width: 40%;
   background-color: transparent;
   border: 1px solid #e1e2e3;
-  font-size: 0.8em;
+  font-size: 0.9em;
   transition: 0.3s;
-  background-color: tomato;
+}
+@media (min-width: 320px) {
+  main .banner__container .banner__item .banner__textContainer p .seeMore {
+    background-color: tomato;
+  }
+}
+@media (min-width: 768px) {
+  main .banner__container .banner__item .banner__textContainer p .seeMore {
+    background-color: transparent;
+    font-size: 1em;
+  }
 }
 main .banner__container .banner__item .banner__textContainer p .seeMore:hover {
   background: tomato;
@@ -550,11 +570,6 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
 main .main__productsBanner .products__container .products__sliderBulbs .products__sliderBulbContainer .products__productTilePrice .price__promotionPrice {
   font-family: "Metropolis-bold";
   padding: 3px;
-}
-
-.onclick-switch {
-  opacity: 1;
-  transform: translatex(800px);
 }
 
 .WhyUs .WhyUs__photo {
