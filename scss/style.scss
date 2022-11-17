@@ -110,6 +110,7 @@ header {
 			border: 0;
 		}
 	}
+	
 }
 .hamburger {
 	position: fixed;
@@ -407,6 +408,7 @@ main {
 		}
 		.products__container{
       position: relative;
+	  transition: 1s;
       .products__sliderButtons{
 		@media (min-width: 320px){
 			display: none;
@@ -627,3 +629,12 @@ main {
 	}
   
   }
+
+.bulb__mover--right{
+	transform: translateX(75%);
+	transition: 1s;
+}
+.bulb__mover--left{
+	transform: translateX(-250px);
+	transition: 1s;
+}

@@ -368,22 +368,22 @@ main .banner__container .banner__item .banner__textContainer p .heading {
   bottom: 49%;
   left: 10%;
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   main .banner__container .banner__item .banner__textContainer p .heading {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 }
 main .banner__container .banner__item .banner__textContainer p .text {
   position: absolute;
   bottom: 41%;
   left: 10%;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 @media (min-width: 768px) {
   main .banner__container .banner__item .banner__textContainer p .text {
-    font-size: 0.6em;
+    font-size: 1.3rem;
   }
 }
 main .banner__container .banner__item .banner__textContainer p .seeMore {
@@ -449,6 +449,7 @@ main .main__productsBanner .products__TitleHeader::after {
 }
 main .main__productsBanner .products__container {
   position: relative;
+  transition: 1s;
 }
 main .main__productsBanner .products__container .products__sliderButtons {
   position: absolute;
@@ -684,6 +685,16 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
   opacity: 1;
   cursor: pointer;
   z-index: 10;
+}
+
+.bulb__mover--right {
+  transform: translateX(75%);
+  transition: 1s;
+}
+
+.bulb__mover--left {
+  transform: translateX(-250px);
+  transition: 1s;
 }
 
 /*# sourceMappingURL=style.css.map */
