@@ -574,14 +574,7 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
   font-family: "Metropolis-bold";
   padding: 3px;
 }
-
-.onclick-switch {
-  opacity: 1;
-  transform: translatex(800px);
-  z-index: 2;
-}
-
-.WhyUs .WhyUs__photo {
+main .WhyUs .WhyUs__photo {
   position: relative;
   width: 100%;
   height: 550px;
@@ -592,7 +585,7 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
   background-repeat: no-repeat;
   background-position: 65%;
 }
-.WhyUs .WhyUs__photo::before {
+main .WhyUs .WhyUs__photo::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -601,7 +594,7 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
   left: 0px;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.WhyUs .WhyUs__text--field {
+main .WhyUs .WhyUs__text--field {
   position: relative;
   margin-left: 10%;
   margin-bottom: 10px;
@@ -609,7 +602,7 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
   width: 80%;
   overflow: hidden;
 }
-.WhyUs .WhyUs__text--field p {
+main .WhyUs .WhyUs__text--field p {
   margin-top: 7%;
   margin-bottom: 7%;
   display: flex;
@@ -621,43 +614,43 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
   text-align: center;
 }
 @media (min-width: 768px) {
-  .WhyUs .WhyUs__text--field p {
+  main .WhyUs .WhyUs__text--field p {
     margin-top: 4%;
     margin-bottom: 3%;
   }
 }
-.WhyUs .WhyUs__text--field p.bold {
+main .WhyUs .WhyUs__text--field p.bold {
   margin-top: 3%;
   font-weight: bold;
   font-size: 25px;
   font-family: "Metropolis-bold";
 }
-.WhyUs .WhyUs__border--container {
+main .WhyUs .WhyUs__border--container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.WhyUs .WhyUs__border--text {
+main .WhyUs .WhyUs__border--text {
   height: 2px;
   width: 100%;
   background-color: #fff;
   opacity: 40%;
   z-index: 10;
 }
-.WhyUs .WhyUs__border--rectangle {
+main .WhyUs .WhyUs__border--rectangle {
   width: 15%;
   height: 3px;
   background-color: #f74137;
   z-index: 1;
 }
-.WhyUs .WhyUs__icons--container {
+main .WhyUs .WhyUs__icons--container {
   height: 27%;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.WhyUs .WhyUs__icon {
+main .WhyUs .WhyUs__icon {
   width: 150px;
   height: 100px;
   border: 1px solid rgba(255, 255, 255, 0.7);
@@ -670,21 +663,21 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
   gap: 10px;
 }
 @media (min-width: 768px) {
-  .WhyUs .WhyUs__icon {
+  main .WhyUs .WhyUs__icon {
     width: 265px;
     height: 140px;
   }
 }
-.WhyUs .WhyUs__btn--container {
+main .WhyUs .WhyUs__btn--container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.WhyUs .WhyUs__btn--container a {
+main .WhyUs .WhyUs__btn--container a {
   z-index: 1;
   margin-top: 2.5%;
 }
-.WhyUs .WhyUs__company--info {
+main .WhyUs .WhyUs__company--info {
   width: 200px;
   height: 50px;
   background-color: #f74137;
@@ -694,6 +687,12 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
   text-transform: uppercase;
   font-size: 12px;
   cursor: pointer;
+}
+
+.onclick-switch {
+  opacity: 1;
+  transform: translatex(800px);
+  z-index: 2;
 }
 
 footer .footer__container {

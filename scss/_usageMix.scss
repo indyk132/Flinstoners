@@ -1,0 +1,15 @@
+@use "./Variables" as variables;
+@mixin centering {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@mixin Bulb-text {
+	padding-left: 31px;
+	padding-right: 31px;
+	width: 100%;
+	text-align: center;
+	letter-spacing: -0.28px;
+	color: variables.$TextColor;
+	font-size: variables.$FontS;
+}
