@@ -5,83 +5,113 @@
 @use "./hamburger.scss" as hamburger;
 @mixin headerMix {
     header {
+        display: flex;
         flex-direction: column;
+        @media (min-width: 768px){
+            flex-direction: row;
+        }
         height: 140px;
         font-family: variables.$font;
         text-transform: uppercase;
-    
-        .header__top {
-            @include usage.centering();
-            width: 100%;
-            margin-top: 8px;
-            border-bottom: variables.$border;
-            img {
+        
+        .header__container{
+            display: flex;
+            .header__top {
                 display: flex;
+                @include usage.centering();
                 width: 100%;
-            }
-        }
-        .header__searchBar {
-            @media (min-width: 768px) {
-                display: none;
-            }
-            width: 100%;
-            height: 50%;
-            .header__searchBarBottom {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 100%;
-                .input__searchBar {
-                    width: 13.875rem;
-                    height: 2.8125rem;
-                    text-align: center;
-                    font-size: 17px;
-                    border: 1px solid rgba(50, 57, 68, 0.3);
+                margin-top: 8px;
+                border-bottom: variables.$border;
+                img {
+                    display: flex;
+                    width: 100%;
+                }
+                @media (min-width: 768px){
+                    width: 30%;
+                    margin-right: 100px;
+                    padding-right: 100px;
                 }
             }
-        }
-        .menuBar {
-            background-color: #333333;
-            font-family: variables.$font2;
-            text-transform: uppercase;
-            z-index: 20;
-    
-            .menuBar__stickyBottom {
+            .header__searchBar {
                 @media (min-width: 768px) {
                     display: none;
                 }
-                position: fixed;
-                @include usage.centering;
-                align-content: flex-start;
-                bottom: 0;
                 width: 100%;
-                background-color: white;
-                font-size: 23px;
-                border: variables.$border;
-                z-index: 20;
-                left: 0;
-            }
-            .box__menu {
-                @include usage.centering;
-                width: 20%;
-                height: 68px;
-                border-right: variables.$border;
-                text-align: center;
-                transition: 0.3s;
-    
-                .box__item {
-                    font-size: 11px;
-                    padding: 3px;
-                    margin-bottom: -4px;
+                height: 50%;
+                .header__searchBarBottom {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    .input__searchBar {
+                        width: 13.875rem;
+                        height: 2.8125rem;
+                        text-align: center;
+                        font-size: 17px;
+                        border: 1px solid rgba(50, 57, 68, 0.3);
+                    }
                 }
             }
-    
-            .shopping__cart {
-                border: 0;
+            .menuBar {
+                display: flex;
+                justify-content: end;
+                align-items: end;
+                background-color: #fff;
+                font-family: variables.$font2;
+                text-transform: uppercase;
+                z-index: 20;
+                
+                .menuBar__stickyBottom {
+                    @media (min-width: 768px) {
+                        // display: flex;
+                        position: inherit;
+                        width: 50%;
+                        
+                    }
+                    position: fixed;
+                    @include usage.centering;
+                    align-content: flex-start;
+                    bottom: 0;
+                    width: 100%;
+                    background-color: white;
+                    font-size: 23px;
+                    border: variables.$border;
+                    z-index: 20;
+                    left: 0;
+                }
+                .box__menu {
+                    @include usage.centering;
+                    width: 20%;
+                    height: 68px;
+                    border-right: variables.$border;
+                    text-align: center;
+                    transition: 0.3s;
+        
+                    .box__item {
+                        font-size: 11px;
+                        padding: 3px;
+                        margin-bottom: -4px;
+                    }
+
+                    @media (min-width: 768px){
+                        display: flex;
+                        width: 100%;
+                        padding-left: 75px;
+                    }
+                }
+        
+                .shopping__cart {
+                    border: 0;
+                }
+                @media (min-width: 768px) {
+                    .menu{
+                        display: none;
+                    }
+                }
             }
         }
+            @include hamburger.hamburger;
     }
-        @include hamburger.hamburger;
-        
+            
 }

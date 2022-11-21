@@ -98,12 +98,22 @@ body a {
 }
 
 header {
+  display: flex;
   flex-direction: column;
   height: 140px;
   font-family: "Metropolis-bold";
   text-transform: uppercase;
 }
-header .header__top {
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+  }
+}
+header .header__container {
+  display: flex;
+}
+header .header__container .header__top {
+  display: flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,40 +121,50 @@ header .header__top {
   margin-top: 8px;
   border-bottom: 1px solid rgba(225, 226, 227, 0.2);
 }
-header .header__top img {
+header .header__container .header__top img {
   display: flex;
   width: 100%;
 }
-header .header__searchBar {
+@media (min-width: 768px) {
+  header .header__container .header__top {
+    width: 30%;
+    margin-right: 100px;
+    padding-right: 100px;
+  }
+}
+header .header__container .header__searchBar {
   width: 100%;
   height: 50%;
 }
 @media (min-width: 768px) {
-  header .header__searchBar {
+  header .header__container .header__searchBar {
     display: none;
   }
 }
-header .header__searchBar .header__searchBarBottom {
+header .header__container .header__searchBar .header__searchBarBottom {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-header .header__searchBar .header__searchBarBottom .input__searchBar {
+header .header__container .header__searchBar .header__searchBarBottom .input__searchBar {
   width: 13.875rem;
   height: 2.8125rem;
   text-align: center;
   font-size: 17px;
   border: 1px solid rgba(50, 57, 68, 0.3);
 }
-header .menuBar {
-  background-color: #333333;
+header .header__container .menuBar {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  background-color: #fff;
   font-family: Metropolis, Arial, sans-serif;
   text-transform: uppercase;
   z-index: 20;
 }
-header .menuBar .menuBar__stickyBottom {
+header .header__container .menuBar .menuBar__stickyBottom {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -159,11 +179,12 @@ header .menuBar .menuBar__stickyBottom {
   left: 0;
 }
 @media (min-width: 768px) {
-  header .menuBar .menuBar__stickyBottom {
-    display: none;
+  header .header__container .menuBar .menuBar__stickyBottom {
+    position: inherit;
+    width: 50%;
   }
 }
-header .menuBar .box__menu {
+header .header__container .menuBar .box__menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,16 +194,27 @@ header .menuBar .box__menu {
   text-align: center;
   transition: 0.3s;
 }
-header .menuBar .box__menu .box__item {
+header .header__container .menuBar .box__menu .box__item {
   font-size: 11px;
   padding: 3px;
   margin-bottom: -4px;
 }
-header .menuBar .shopping__cart {
+@media (min-width: 768px) {
+  header .header__container .menuBar .box__menu {
+    display: flex;
+    width: 100%;
+    padding-left: 75px;
+  }
+}
+header .header__container .menuBar .shopping__cart {
   border: 0;
 }
-
-.hamburger {
+@media (min-width: 768px) {
+  header .header__container .menuBar .menu {
+    display: none;
+  }
+}
+header .hamburger {
   position: fixed;
   top: 0;
   left: -800px;
@@ -195,7 +227,7 @@ header .menuBar .shopping__cart {
   opacity: 0;
   z-index: 0;
 }
-.hamburger .hamburger__category {
+header .hamburger .hamburger__category {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -205,35 +237,35 @@ header .menuBar .shopping__cart {
   border-bottom: 1px solid rgba(225, 226, 227, 0.2);
   font-family: "Metropolis-bold";
 }
-.hamburger .hamburger__category .hamburger__arrow {
+header .hamburger .hamburger__category .hamburger__arrow {
   width: 10%;
   margin-left: 5%;
   margin-right: 4%;
 }
-.hamburger .hamburger__category .hamburger__arrow .icon-icon_05 {
+header .hamburger .hamburger__category .hamburger__arrow .icon-icon_05 {
   font-size: 13px;
   border: 0;
   background-color: #ffffff;
 }
-.hamburger .hamburger__category .hamburger__x {
+header .hamburger .hamburger__category .hamburger__x {
   width: 100%;
   display: flex;
   justify-content: end;
   margin: 13px;
 }
-.hamburger .hamburger__category .hamburger__x .icon-x {
+header .hamburger .hamburger__category .hamburger__x .icon-x {
   padding: 13px;
   font-size: 10px;
   background-color: #f3f1f1;
   border: 0;
 }
-.hamburger .hamburger__searchBar {
+header .hamburger .hamburger__searchBar {
   width: 100%;
   display: inline;
   justify-content: center;
   align-items: center;
 }
-.hamburger .hamburger__searchBar .input__hamburger {
+header .hamburger .hamburger__searchBar .input__hamburger {
   height: 45px;
   width: 92%;
   text-indent: 20px;
@@ -241,12 +273,12 @@ header .menuBar .shopping__cart {
   margin: 10px;
   border: 1px solid rgba(50, 57, 68, 0.3);
 }
-.hamburger .hamburger__menu {
+header .hamburger .hamburger__menu {
   width: 95%;
   height: 52%;
   margin-left: 11px;
 }
-.hamburger .hamburger__menu .items__list {
+header .hamburger .hamburger__menu .items__list {
   position: relative;
   height: 40px;
   display: flex;
@@ -254,24 +286,24 @@ header .menuBar .shopping__cart {
   border-bottom: 1px solid rgba(225, 226, 227, 0.2);
   font-family: Metropolis, Arial, sans-serif;
 }
-.hamburger .hamburger__menu .items__list .products__ExpanderArrow {
+header .hamburger .hamburger__menu .items__list .products__ExpanderArrow {
   position: fixed;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: end;
 }
-.hamburger .hamburger__menu .items__list .products__ExpanderArrow .expander__arrow {
+header .hamburger .hamburger__menu .items__list .products__ExpanderArrow .expander__arrow {
   position: fixed;
   top: 29%;
   padding: 10px;
   border-left: 1px solid rgba(225, 226, 227, 0.2);
 }
-.hamburger .hamburger__menu .items__list .products__ExpanderArrow .expander__arrow .icon-icon_04 {
+header .hamburger .hamburger__menu .items__list .products__ExpanderArrow .expander__arrow .icon-icon_04 {
   background-color: #ffffff;
   border: 0;
 }
-.hamburger .hamburger__language {
+header .hamburger .hamburger__language {
   width: 50%;
   font-size: 15px;
   display: flex;
@@ -279,7 +311,7 @@ header .menuBar .shopping__cart {
   margin: 1px;
   background-color: #ffffff;
 }
-.hamburger .hamburger__language .language__items {
+header .hamburger .hamburger__language .language__items {
   border-left: 1px solid rgba(225, 226, 227, 0.2);
   padding-left: 6px;
   font-family: Metropolis, Arial, sans-serif;
@@ -484,6 +516,7 @@ main .main__productsBanner .products__container .products__sliderButtons .button
   color: #ffffff;
   width: 50px;
   height: 50px;
+  z-index: 1;
 }
 main .main__productsBanner .products__container .products__sliderBulbs {
   display: flex;
