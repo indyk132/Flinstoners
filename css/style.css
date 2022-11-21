@@ -478,6 +478,7 @@ main .main__productsBanner .products__TitleHeader::after {
   width: 2.5rem;
 }
 main .main__productsBanner .products__container {
+  display: flex;
   position: relative;
   transition: 1s;
 }
@@ -516,7 +517,6 @@ main .main__productsBanner .products__container .products__sliderButtons .button
   color: #ffffff;
   width: 50px;
   height: 50px;
-  z-index: 1;
 }
 main .main__productsBanner .products__container .products__sliderBulbs {
   display: flex;
