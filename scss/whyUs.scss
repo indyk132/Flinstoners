@@ -9,13 +9,13 @@
             width: 100%;
             height: 550px;
             margin-top: 10%;
-            background-image: url(/photos/img_02.jpg);
+            background-image: url(/photos/img_07.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: 65%;
+            background-position: 50%;
         }
-    
+        
         .WhyUs__photo::before {
             content: "";
             position: absolute;
@@ -23,34 +23,50 @@
             right: 0px;
             bottom: 0px;
             left: 0px;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0,0,0,0.30);
         }
     
         .WhyUs__text--field {
             position: relative;
             margin-left: 10%;
-            margin-bottom: 10px;
-            height: 35%;
+            height: 10%;
+            margin-bottom: 2%;
             width: 80%;
             overflow: hidden;
-            p {
-                margin-top: 7%;
-                margin-bottom: 7%;
+
+            p.bold {
                 @include usage.centering();
-                color: #fff;
-                font-size: 15px;
+                margin-top: 3%;
+                font-weight: bold;
+                font-size: 25px;
                 font-family: variables.$font2;
+                color: #fff;
                 text-align: center;
                 @media (min-width: 768px) {
                     margin-top: 4%;
                     margin-bottom: 3%;
+                    font-size: 44px;
                 }
             }
-            p.bold {
+            @media (min-width: 768px) {
+                height: 16%;
+            }
+        }
+
+        .WhyUs__second--field {
+            position: relative;
+            margin-top: 5%;
+            p {
+                @include usage.centering();
+                font-family: variables.$font2;
+                color: #fff;
+                font-size: 18px;
+                text-align: center;
+            }
+            @media (min-width: 768px) {
+                width: 65%;
+                margin-left: 17.5%;
                 margin-top: 3%;
-                font-weight: bold;
-                font-size: 25px;
-                font-family: variables.$font;
             }
         }
     
@@ -64,27 +80,39 @@
             background-color: #fff;
             opacity: 40%;
             z-index: 10;
-        }
+          }
     
-        .WhyUs__border--rectangle {
-            width: 15%;
+          .WhyUs__border--rectangle {
+            width: 12%;
             height: 3px;
-            background-color: #f74137;
+            margin-bottom: 2.5px;
+            background-color: #F74137;
             z-index: 1;
-        }
+          }
     
         .WhyUs__icons--container {
-            height: 27%;
+            margin-top: 2%;
+            height: 19%;
             width: 100%;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            font-family: variables.$font2;
+            max-width: 60%;
+	        margin-left: 20%;
+	        gap: 5px;
+
+            @media (min-width: 768px) {
+                height: 27%;
+                margin-top: 3%;
+                gap: 25px;
+            }
         }
     
         .WhyUs__icon {
             width: 150px;
             height: 100px;
-            border: 1px solid rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -93,7 +121,7 @@
             z-index: 10;
             gap: 10px;
             @media (min-width: 768px) {
-                width: 265px;
+                width: 250px;
                 height: 140px;
             }
         }
@@ -103,12 +131,18 @@
     
             a {
                 z-index: 1;
-                margin-top: 2.5%;
+                margin-top: 10%;
+            }
+
+            @media (min-width: 768px) {
+                a{
+                    margin-top: 2%;
+                }
             }
         }
     
         .WhyUs__company--info {
-            width: 200px;
+            width: 230px;
             height: 50px;
             background-color: #f74137;
             border: none;
