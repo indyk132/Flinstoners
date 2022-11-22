@@ -27,6 +27,7 @@
 			width: 2.5rem;
 		}
 		.products__container {
+			display: flex;
 			position: relative;
 			transition: 1s;
 			.products__sliderButtons {

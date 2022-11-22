@@ -5,7 +5,11 @@
 @use "./hamburger.scss" as hamburger;
 @mixin headerMix {
     header {
+        display: flex;
         flex-direction: column;
+        @media (min-width: 768px){
+            flex-direction: row;
+        }
         height: 140px;
         font-family: variables.$font;
         text-transform: uppercase;
