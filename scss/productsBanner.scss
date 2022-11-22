@@ -29,7 +29,7 @@
 		.products__container {
 			display: flex;
 			position: relative;
-			transition: 1s;
+			// transition: 1s;
 			.products__sliderButtons {
 				@media (min-width: 320px) {
 					display: none;
@@ -43,7 +43,7 @@
 				height: 0.1px;
 				opacity: 0.5;
 				top: 250px;
-
+				z-index: 1;
 				.button__leftArrow {
 					position: absolute;
 					left: 0;
@@ -66,18 +66,29 @@
 			.products__sliderBulbs {
 				@media (min-width: 768px) {
 					overflow: hidden;
+					position: absolute;
 				}
-				display: flex;
-				column-gap: 10px;
-				max-width: 100%;
-				overflow: auto;
-
+				overflow-x: hidden;
+				width: 100%;
+				.product__sliderScroll{
+					@media (min-width: 768px) {
+						
+						transition: 1s;
+					}
+					width: 100%;
+					display: flex;
+					column-gap: 10px;
+					max-width: 100%;
+					// overflow: auto;
+				}
 				.products__sliderBulbContainer {
 					@media (min-width: 768px) {
-						min-width: auto;
+						width: 20%;
+						
 						a:hover {
 							background-color: #111111;
 						}
+						
 					}
 					min-width: 280px;
 					height: 500px;
