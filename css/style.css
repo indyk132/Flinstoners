@@ -261,7 +261,7 @@ header .menuBar .shopping__cart {
   background-color: #ffffff;
   text-transform: uppercase;
   opacity: 0;
-  z-index: 0;
+  z-index: -1;
 }
 .hamburger .hamburger__category {
   display: flex;
@@ -521,7 +521,6 @@ main .main__productsBanner .products__TitleHeader::after {
 main .main__productsBanner .products__container {
   display: flex;
   position: relative;
-  transition: 1s;
 }
 main .main__productsBanner .products__container .products__sliderButtons {
   position: absolute;
@@ -530,6 +529,7 @@ main .main__productsBanner .products__container .products__sliderButtons {
   height: 0.1px;
   opacity: 0.5;
   top: 250px;
+  z-index: 1;
 }
 @media (min-width: 320px) {
   main .main__productsBanner .products__container .products__sliderButtons {
@@ -560,14 +560,24 @@ main .main__productsBanner .products__container .products__sliderButtons .button
   height: 50px;
 }
 main .main__productsBanner .products__container .products__sliderBulbs {
-  display: flex;
-  column-gap: 10px;
-  max-width: 100%;
-  overflow: auto;
+  overflow-x: hidden;
+  width: 100%;
 }
 @media (min-width: 768px) {
   main .main__productsBanner .products__container .products__sliderBulbs {
     overflow: hidden;
+    position: absolute;
+  }
+}
+main .main__productsBanner .products__container .products__sliderBulbs .product__sliderScroll {
+  width: 100%;
+  display: flex;
+  column-gap: 10px;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  main .main__productsBanner .products__container .products__sliderBulbs .product__sliderScroll {
+    transition: 1s;
   }
 }
 main .main__productsBanner .products__container .products__sliderBulbs .products__sliderBulbContainer {
@@ -579,7 +589,7 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
 }
 @media (min-width: 768px) {
   main .main__productsBanner .products__container .products__sliderBulbs .products__sliderBulbContainer {
-    min-width: auto;
+    width: 20%;
   }
   main .main__productsBanner .products__container .products__sliderBulbs .products__sliderBulbContainer a:hover {
     background-color: #111111;
@@ -801,12 +811,6 @@ main .WhyUs .WhyUs__company--info {
   cursor: pointer;
 }
 
-.onclick-switch {
-  opacity: 1;
-  transform: translatex(800px);
-  z-index: 2;
-}
-
 footer .footer__container {
   position: relative;
   width: 100%;
@@ -938,6 +942,12 @@ footer .footer__copyright .cpright__element {
   margin: 0px 0px 3px;
   text-align: center;
   padding: 5px;
+}
+
+.onclick-switch {
+  opacity: 1;
+  transform: translatex(800px);
+  z-index: 10;
 }
 
 .bulb__mover--right {

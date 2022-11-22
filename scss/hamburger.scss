@@ -15,7 +15,7 @@
         background-color: #ffffff;
         text-transform: uppercase;
         opacity: 0;
-        z-index: 0;
+        z-index: -1;
     
         .hamburger__category {
             display: flex;
