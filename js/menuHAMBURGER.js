@@ -16,4 +16,6 @@ const arrow = document.querySelector(".icon-icon_05");
 function hideARROW() {
     hamburger.classList.toggle("onclick-switch"), switch__x.classList.remove("icon-x"), switch__x.classList.add("icon-widok_01"), rotateX.style.transform = "rotate(90deg)"
 }
-x.addEventListener("click", closeX), menu.addEventListener("click", HAMBURGERmenu), arrow.addEventListener("click", hideARROW);
+x.addEventListener("click", closeX), 
+menu.addEventListener("click", HAMBURGERmenu), 
+arrow.addEventListener("click", hideARROW);

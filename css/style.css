@@ -98,73 +98,78 @@ body a {
 }
 
 header {
+  width: 100%;
   display: flex;
   flex-direction: column;
   height: 140px;
   font-family: "Metropolis-bold";
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
-@media (min-width: 768px) {
-  header {
-    flex-direction: row;
-  }
-}
-header .header__container {
-  display: flex;
-}
-header .header__container .header__top {
-  display: flex;
+header .header__top {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   margin-top: 8px;
-  border-bottom: 1px solid rgba(225, 226, 227, 0.2);
+  border-bottom: 1px solid #e1e2e3;
 }
-header .header__container .header__top img {
+@media (min-width: 768px) {
+  header .header__top {
+    justify-content: flex-start;
+    padding-bottom: 10px;
+  }
+}
+header .header__top img {
   display: flex;
   width: 100%;
 }
-@media (min-width: 768px) {
-  header .header__container .header__top {
-    width: 30%;
-    margin-right: 100px;
-    padding-right: 100px;
-  }
-}
-header .header__container .header__searchBar {
+header .header__searchBar {
   width: 100%;
   height: 50%;
 }
 @media (min-width: 768px) {
-  header .header__container .header__searchBar {
+  header .header__searchBar {
     display: none;
   }
 }
-header .header__container .header__searchBar .header__searchBarBottom {
+header .header__searchBar .header__searchBarBottom {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-header .header__container .header__searchBar .header__searchBarBottom .input__searchBar {
+header .header__searchBar .header__searchBarBottom .input__searchBar {
   width: 13.875rem;
   height: 2.8125rem;
   text-align: center;
   font-size: 17px;
   border: 1px solid rgba(50, 57, 68, 0.3);
 }
-header .header__container .menuBar {
-  display: flex;
-  justify-content: end;
-  align-items: end;
-  background-color: #fff;
+header .header__categoryMenu {
+  width: 100%;
+  height: 57px;
+  display: none;
+  align-items: center;
+  text-align: center;
+  padding: 2px;
+}
+@media (min-width: 768px) {
+  header .header__categoryMenu {
+    display: flex;
+  }
+}
+header .header__categoryMenu .category__item {
+  width: 18%;
+  font-size: 11px;
+}
+header .menuBar {
   font-family: Metropolis, Arial, sans-serif;
   text-transform: uppercase;
   z-index: 20;
 }
-header .header__container .menuBar .menuBar__stickyBottom {
+header .menuBar .menuBar__stickyBottom {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -173,48 +178,79 @@ header .header__container .menuBar .menuBar__stickyBottom {
   bottom: 0;
   width: 100%;
   background-color: white;
-  font-size: 23px;
-  border: 1px solid rgba(225, 226, 227, 0.2);
+  font-size: 13px;
+  border: 1px solid #e1e2e3;
   z-index: 20;
   left: 0;
 }
 @media (min-width: 768px) {
-  header .header__container .menuBar .menuBar__stickyBottom {
-    position: inherit;
-    width: 50%;
+  header .menuBar .menuBar__stickyBottom {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    justify-content: end;
+    background-color: transparent;
+    font-size: 12px;
+    border: 0;
+    width: 100%;
+    font-family: "Metropolis-bold";
   }
 }
-header .header__container .menuBar .box__menu {
+header .menuBar .box__menu {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20%;
-  height: 68px;
-  border-right: 1px solid rgba(225, 226, 227, 0.2);
+  height: 50px;
+  border-right: 1px solid #e1e2e3;
   text-align: center;
   transition: 0.3s;
 }
-header .header__container .menuBar .box__menu .box__item {
-  font-size: 11px;
-  padding: 3px;
-  margin-bottom: -4px;
-}
 @media (min-width: 768px) {
-  header .header__container .menuBar .box__menu {
+  header .menuBar .box__menu {
     display: flex;
-    width: 100%;
-    padding-left: 75px;
+    border: 0;
+    width: 12%;
   }
 }
-header .header__container .menuBar .shopping__cart {
-  border: 0;
+header .menuBar .box__menu a {
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
-  header .header__container .menuBar .menu {
+  header .menuBar .box__menu a {
+    flex-direction: row;
+    column-gap: 10px;
+  }
+}
+@media (min-width: 768px) {
+  header .menuBar .box__menu i {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  header .menuBar .box__menu span {
+    height: 15px;
+    margin-top: 5px;
+  }
+}
+@media (min-width: 768px) {
+  header .menuBar .box__menu--none {
     display: none;
   }
 }
-header .hamburger {
+header .menuBar .box__item {
+  font-size: 13px;
+  padding: 3px;
+  margin-bottom: -4px;
+}
+header .menuBar .shopping__cart {
+  border: 0;
+}
+
+.hamburger {
   position: fixed;
   top: 0;
   left: -800px;
@@ -227,45 +263,45 @@ header .hamburger {
   opacity: 0;
   z-index: -1;
 }
-header .hamburger .hamburger__category {
+.hamburger .hamburger__category {
   display: flex;
   justify-content: start;
   align-items: center;
   width: 100%;
   height: 14.8%;
   font-size: 17px;
-  border-bottom: 1px solid rgba(225, 226, 227, 0.2);
+  border-bottom: 1px solid #e1e2e3;
   font-family: "Metropolis-bold";
 }
-header .hamburger .hamburger__category .hamburger__arrow {
+.hamburger .hamburger__category .hamburger__arrow {
   width: 10%;
   margin-left: 5%;
   margin-right: 4%;
 }
-header .hamburger .hamburger__category .hamburger__arrow .icon-icon_05 {
+.hamburger .hamburger__category .hamburger__arrow .icon-icon_05 {
   font-size: 13px;
   border: 0;
   background-color: #ffffff;
 }
-header .hamburger .hamburger__category .hamburger__x {
+.hamburger .hamburger__category .hamburger__x {
   width: 100%;
   display: flex;
   justify-content: end;
   margin: 13px;
 }
-header .hamburger .hamburger__category .hamburger__x .icon-x {
+.hamburger .hamburger__category .hamburger__x .icon-x {
   padding: 13px;
   font-size: 10px;
   background-color: #f3f1f1;
   border: 0;
 }
-header .hamburger .hamburger__searchBar {
+.hamburger .hamburger__searchBar {
   width: 100%;
   display: inline;
   justify-content: center;
   align-items: center;
 }
-header .hamburger .hamburger__searchBar .input__hamburger {
+.hamburger .hamburger__searchBar .input__hamburger {
   height: 45px;
   width: 92%;
   text-indent: 20px;
@@ -273,37 +309,37 @@ header .hamburger .hamburger__searchBar .input__hamburger {
   margin: 10px;
   border: 1px solid rgba(50, 57, 68, 0.3);
 }
-header .hamburger .hamburger__menu {
+.hamburger .hamburger__menu {
   width: 95%;
   height: 52%;
   margin-left: 11px;
 }
-header .hamburger .hamburger__menu .items__list {
+.hamburger .hamburger__menu .items__list {
   position: relative;
   height: 40px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(225, 226, 227, 0.2);
+  border-bottom: 1px solid #e1e2e3;
   font-family: Metropolis, Arial, sans-serif;
 }
-header .hamburger .hamburger__menu .items__list .products__ExpanderArrow {
+.hamburger .hamburger__menu .items__list .products__ExpanderArrow {
   position: fixed;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: end;
 }
-header .hamburger .hamburger__menu .items__list .products__ExpanderArrow .expander__arrow {
+.hamburger .hamburger__menu .items__list .products__ExpanderArrow .expander__arrow {
   position: fixed;
   top: 29%;
   padding: 10px;
-  border-left: 1px solid rgba(225, 226, 227, 0.2);
+  border-left: 1px solid #e1e2e3;
 }
-header .hamburger .hamburger__menu .items__list .products__ExpanderArrow .expander__arrow .icon-icon_04 {
+.hamburger .hamburger__menu .items__list .products__ExpanderArrow .expander__arrow .icon-icon_04 {
   background-color: #ffffff;
   border: 0;
 }
-header .hamburger .hamburger__language {
+.hamburger .hamburger__language {
   width: 50%;
   font-size: 15px;
   display: flex;
@@ -311,8 +347,8 @@ header .hamburger .hamburger__language {
   margin: 1px;
   background-color: #ffffff;
 }
-header .hamburger .hamburger__language .language__items {
-  border-left: 1px solid rgba(225, 226, 227, 0.2);
+.hamburger .hamburger__language .language__items {
+  border-left: 1px solid #e1e2e3;
   padding-left: 6px;
   font-family: Metropolis, Arial, sans-serif;
 }
@@ -431,7 +467,7 @@ main .banner__container .banner__item .banner__textContainer p .seeMore {
   height: 18%;
   width: 40%;
   background-color: transparent;
-  border: 1px solid rgba(225, 226, 227, 0.2);
+  border: 1px solid #e1e2e3;
   font-size: 0.8em;
   transition: 0.3s;
   background-color: tomato;
@@ -466,7 +502,7 @@ main .main__productsBanner .products__TitleHeader {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid rgba(225, 226, 227, 0.2);
+  border-bottom: 1px solid #e1e2e3;
 }
 main .main__productsBanner .products__TitleHeader::after {
   background-color: #f74137;
@@ -503,7 +539,7 @@ main .main__productsBanner .products__container .products__sliderButtons {
 main .main__productsBanner .products__container .products__sliderButtons .button__leftArrow {
   position: absolute;
   left: 0;
-  border: 1px solid rgba(225, 226, 227, 0.2);
+  border: 1px solid #e1e2e3;
   background-color: #c1c2c6;
   color: #ffffff;
   width: 50px;
@@ -512,7 +548,7 @@ main .main__productsBanner .products__container .products__sliderButtons .button
 main .main__productsBanner .products__container .products__sliderButtons .button__rightArrow {
   position: absolute;
   right: 0;
-  border: 1px solid rgba(225, 226, 227, 0.2);
+  border: 1px solid #e1e2e3;
   background-color: #c1c2c6;
   color: #ffffff;
   width: 50px;
@@ -622,11 +658,11 @@ main .WhyUs .WhyUs__photo {
   width: 100%;
   height: 550px;
   margin-top: 10%;
-  background-image: url(/photos/img_02.jpg);
+  background-image: url(/photos/img_07.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 65%;
+  background-position: 50%;
 }
 main .WhyUs .WhyUs__photo::before {
   content: "";
@@ -635,38 +671,58 @@ main .WhyUs .WhyUs__photo::before {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 main .WhyUs .WhyUs__text--field {
   position: relative;
   margin-left: 10%;
-  margin-bottom: 10px;
-  height: 35%;
+  height: 10%;
+  margin-bottom: 2%;
   width: 80%;
   overflow: hidden;
 }
-main .WhyUs .WhyUs__text--field p {
-  margin-top: 7%;
-  margin-bottom: 7%;
+main .WhyUs .WhyUs__text--field p.bold {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  font-size: 15px;
-  font-family: Metropolis, Arial, sans-serif;
-  text-align: center;
-}
-@media (min-width: 768px) {
-  main .WhyUs .WhyUs__text--field p {
-    margin-top: 4%;
-    margin-bottom: 3%;
-  }
-}
-main .WhyUs .WhyUs__text--field p.bold {
   margin-top: 3%;
   font-weight: bold;
   font-size: 25px;
-  font-family: "Metropolis-bold";
+  font-family: Metropolis, Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  main .WhyUs .WhyUs__text--field p.bold {
+    margin-top: 4%;
+    margin-bottom: 3%;
+    font-size: 44px;
+  }
+}
+@media (min-width: 768px) {
+  main .WhyUs .WhyUs__text--field {
+    height: 16%;
+  }
+}
+main .WhyUs .WhyUs__second--field {
+  position: relative;
+  margin-top: 5%;
+}
+main .WhyUs .WhyUs__second--field p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Metropolis, Arial, sans-serif;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  main .WhyUs .WhyUs__second--field {
+    width: 65%;
+    margin-left: 17.5%;
+    margin-top: 3%;
+  }
 }
 main .WhyUs .WhyUs__border--container {
   display: flex;
@@ -681,22 +737,35 @@ main .WhyUs .WhyUs__border--text {
   z-index: 10;
 }
 main .WhyUs .WhyUs__border--rectangle {
-  width: 15%;
+  width: 12%;
   height: 3px;
-  background-color: #f74137;
+  margin-bottom: 2.5px;
+  background-color: #F74137;
   z-index: 1;
 }
 main .WhyUs .WhyUs__icons--container {
-  height: 27%;
+  margin-top: 2%;
+  height: 19%;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  font-family: Metropolis, Arial, sans-serif;
+  max-width: 60%;
+  margin-left: 20%;
+  gap: 5px;
+}
+@media (min-width: 768px) {
+  main .WhyUs .WhyUs__icons--container {
+    height: 27%;
+    margin-top: 3%;
+    gap: 25px;
+  }
 }
 main .WhyUs .WhyUs__icon {
   width: 150px;
   height: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -707,7 +776,7 @@ main .WhyUs .WhyUs__icon {
 }
 @media (min-width: 768px) {
   main .WhyUs .WhyUs__icon {
-    width: 265px;
+    width: 250px;
     height: 140px;
   }
 }
@@ -718,10 +787,15 @@ main .WhyUs .WhyUs__btn--container {
 }
 main .WhyUs .WhyUs__btn--container a {
   z-index: 1;
-  margin-top: 2.5%;
+  margin-top: 10%;
+}
+@media (min-width: 768px) {
+  main .WhyUs .WhyUs__btn--container a {
+    margin-top: 2%;
+  }
 }
 main .WhyUs .WhyUs__company--info {
-  width: 200px;
+  width: 230px;
   height: 50px;
   background-color: #f74137;
   border: none;
@@ -765,9 +839,10 @@ footer .footer__containerList .list__element {
   }
 }
 footer .footer__containerList .list__element .information__heading {
+  position: relative;
   width: 100%;
   color: #ffffff;
-  border-bottom: 1px solid rgba(225, 226, 227, 0.2);
+  border-bottom: 1px solid #e1e2e3;
   font-family: "Metropolis-bold";
   font-size: 14px;
   text-transform: uppercase;
@@ -794,6 +869,16 @@ footer .footer__containerList .list__element .information__heading .item__expand
 }
 footer .footer__containerList .list__element .information__heading .rotateArrow {
   rotate: 180deg;
+}
+footer .footer__containerList .list__element .information__heading::after {
+  background-color: #f74137;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 1.875rem;
 }
 footer .footer__containerList .list__element .item__listContainer {
   width: 100%;
