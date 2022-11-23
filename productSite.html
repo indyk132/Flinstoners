@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trol</title>
+    <link rel="stylesheet" href="./css/style2.css">
+</head>
+
+<body>
+    <header class="header container">
+        <div class="header__container">
+            <div class="header__top">
+                <h1 class="header__logo">
+                    <img src="../photos/logo.png" alt="logo">
+                </h1>
+            </div>
+
+
+            <div class="header__searchBar">
+                <div class="header__searchBarBottom input">
+                    <input type="text" name="string" class="input__searchBar" value placeholder="Wpisz nazwę produktu">
+
+                </div>
+
+            </div>
+            <div class="header__categoryMenu category">
+                <div class="category__item sourceLight">źródła światła</div>
+                <div class="category__item insideLight"> oświetlenie wewnętrzne</div>
+                <div class="category__item outlet">gniazda, wyłączniki</div>
+                <div class="category__item automatic">automatyka, sterowanie</div>
+                <div class="category__item separator">rodzielanie i aparatura</div>
+                <div class="category__item materials">materiały instalacyjne</div>
+            </div>
+            <nav class="nav__subMenu ">
+                <div class="subMenu__item subMenu__home">strona główna</div>
+                <div class="subMenu__item subMenu__category"> kategoria</div>
+                <div class="subMenu__item subMenu__category">kategoria</div>
+            </nav>
+            <div class="menuBar">
+                <div class="menuBar__stickyBottom box">
+                    <div class="box__menu menu box__menu--none">
+                        <a href="#">
+                            <span class="menu_rotateIconX animationX">
+                                <i class="icon-widok_01 switch__x"></i>
+                            </span>
+                            <span class="box__item">Menu</span>
+                        </a>
+                    </div>
+                    <div class="box__menu contact">
+                        <a href="#"><i class="icon-icon_01"></i>
+                            <span class="box__item">Kontakt</span>
+                        </a>
+                    </div>
+                    <div class="box__menu favorites">
+                        <a href="#"><i class="icon-icon_02"></i>
+                            <span class="box__item">Ulubione</span>
+                        </a>
+                    </div>
+                    <div class="box__menu user">
+                        <a href="#"><i class="icon-icon_03"></i>
+                            <span class="box__item">Moje konto</span>
+                        </a>
+                    </div>
+                    <div class="box__menu shopping__cart">
+                        <a href="#"><i class="icon-icon_06"></i>
+                            <span class="box__item">Koszyk</span>
+                        </a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger">
+                <div class="hamburger__category">
+                    <div class="hamburger__arrow"><button class="icon-icon_05"></button>
+                    </div>
+                    </button>
+                    <span>Kategorie</span>
+                    <div class="hamburger__x"><button class="icon-x"></button>
+                    </div>
+                </div>
+                <div class="hamburger__searchBar">
+                    <div class="hamburger__searchBar input">
+                        <input type="text" name="string" class="input__hamburger" value
+                            placeholder="Wpisz nazwę produktu">
+                    </div>
+                </div>
+                <div class="hamburger__menu items">
+                    <ul>
+                        <li class="items__list products"><a href="#">Produkty</a>
+                            <div class="products__ExpanderArrow expander">
+                                <div class="expander__arrow"><button class="icon-icon_04"></button>
+                                </div>
+                        </li>
+                        <li class="items__list producers"><a href="#">Producenci</a></li>
+                        <li class="items__list news"><a href="#">Nowości</a></li>
+                        <li class="items__list promotion"><a href="#">Promocje</a></li>
+                        <li class="items__list recommended"><a href="#">Polecamy</a></li>
+                        <li class="items__list about us"><a href="#">O nas</a></li>
+                        <li class="items__list inspiration"><a href="#">Inspiracje</a></li>
+                    </ul>
+                </div>
+                <div class="hamburger__language language">
+                    <span class="language__items">PLN</span>
+                    <span class="language__items">polski</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main container">
+        <section class="main__section">
+            <nav class="section__nav">
+                <div class="nav__categoryMenu">
+                    <div class="products__brand">
+                        <p class="plugs">Gniazdka, Wyłączniki</p>
+                        <ul class="bands">
+                            <li class="bands__item">Schneider electric</li>
+                            <li class="bands__item">Kontakt Simon</li>
+                            <li class="bands__item">Berker</li>
+                            <li class="bands__item">Karlik</li>
+                            <li class="bands__item">Hager</li>
+                            <li class="bands__item">ospel</li>
+                            <li class="bands__item">kos</li>
+                            <li class="bands__item">wiplast</li>
+                        </ul>
+                    </div>
+                    <div class="nav__categoryMenu">
+                        <div class="products__filters">
+                            <p class="filters">filtry</p>
+                            <ul class="bands">
+                                <li class="bands__item">Schneider electric</li>
+                                <li class="bands__item">Kontakt Simon</li>
+                                <li class="bands__item">Berker</li>
+                                <li class="bands__item">Karlik</li>
+                                <li class="bands__item">Hager</li>
+                                <li class="bands__item">ospel</li>
+                                <li class="bands__item">kos</li>
+                                <li class="bands__item">wiplast</li>
+                            </ul>
+                        </div>
+
+                    </div>
+            </nav>
+            <div class="main_productList">
+            </div>
+        </section>
+    </main>
+    <footer class="footer container">
+        <div class="footer__container">
+            <div class="footer__containerList list">
+                <div class="list__element information1">
+                    <h2 class="information__heading item">informacje
+                        <button class="item__expandArrow expandArrow1"><i class="icon-icon_05"></i></button>
+                    </h2>
+                    <div class="item__listContainer elements arrow1">
+                        <ul>
+                            <li class="elements__list infAboutShop">Informacje o sklepie</li>
+                            <li class="elements__list advise">Porady</li>
+                            <li class="elements__list blog">Blog</li>
+                            <li class="elements__list gallery">Galeria inspiracji</li>
+                            <li class="elements__list footerContact">Kontakt</li>
+                            <li class="elements__list infAboutShop">Informacje o sklepie</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list__element information2">
+                    <h2 class="information__heading item">informacje
+                        <button class="item__expandArrow expandArrow2"><i class="icon-icon_05"></i></button>
+                    </h2>
+                    <div class="item__listContainer elements arrow2">
+                        <ul>
+                            <li class="elements__list time">Czas realizacji</li>
+                            <li class="elements__list cost">Koszt przesyłki</li>
+                            <li class="elements__list order">Zamów próbkę</li>
+                            <li class="elements__list sewing">Szycie na wymiar</li>
+                            <li class="elements__list time">Czas realizacji</li>
+                            <li class="elements__list cost">Koszt przesyłki</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list__element myAccount">
+                    <h2 class="information__heading item">moje konto
+                        <button class="item__expandArrow expandArrow3"><i class="icon-icon_05"></i></button>
+                    </h2>
+                    <div class="item__listContainer elements arrow3">
+                        <ul>
+                            <li class="elements__list login">Logowanie</li>
+                            <li class="elements__list singin">Rejestracja</li>
+                            <li class="elements__list orders">Zamównienia</li>
+                            <li class="elements__list setting">Ustawienia konta</li>
+                            <li class="elements__list password">Zmiana hasła</li>
+                            <li class="elements__list storage">Schowek</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list__element information3">
+                    <h2 class="information__heading item">informacje
+                        <button class="item__expandArrow expandArrow4"><i class="icon-icon_05"></i></button>
+                    </h2>
+                    <div class="item__listContainer elements arrow4">
+                        <ul>
+                            <li class="elements__list infAboutShop">Informacje o sklepie</li>
+                            <li class="elements__list advise">Porady</li>
+                            <li class="elements__list blog">Blog</li>
+                            <li class="elements__list gallery">Galeria inspiracji</li>
+                            <li class="elements__list footerContact">Kontakt</li>
+                            <li class="elements__list infAboutShop">Informacje o sklepie</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="footer__copyright cpright">
+                <span class="cpright__element">Copyright 2022. Wszystkie prawa zasteżone</span>
+                <span class="cpright__element">Agencja interaktywna <a href="https://www.trol.pl/"
+                        rel="nofollow noopener" target="_blank">[ti]</a> Powered by <a href="https://2click.pl/"
+                        rel="nofollow noopener" target="_blank">2ClickShop®</a></span>
+            </div>
+        </div>
+
+    </footer>
+    <script src="./js/footer__mobile.js"></script>
+    <script src="./js/productsSlider.js"></script>
+    <script src="./js/menuHAMBURGER.js"></script>
+    <script src="./js/pruductsHAMBURGER.js"></script>
+    <script src="./js/slider.js"></script>
+</body>
+
+</html>

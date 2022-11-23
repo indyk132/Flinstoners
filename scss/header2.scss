@@ -1,0 +1,171 @@
+@use "../css/icons.css";
+@use "../css/fonts.css";
+@use "./Variables" as variables;
+@use "./usageMix" as usage;
+@use "./hamburger.scss" as hamburger;
+@mixin headerMix {
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        height: 140px;
+        font-family: variables.$font;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        .header__top {
+            @media (min-width: 768px) {
+                justify-content: flex-start;
+                padding-bottom: 10px;
+            }
+            @include usage.centering();
+            width: 100%;
+            margin-top: 8px;
+            border-bottom: variables.$border;
+            img {
+                
+                display: flex;
+                width: 100%;
+            }
+        }
+        .header__searchBar {
+            @media (min-width: 768px) {
+                display: none;
+            }
+            width: 100%;
+            height: 50%;
+            .header__searchBarBottom {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                .input__searchBar {
+                    width: 13.875rem;
+                    height: 2.8125rem;
+                    text-align: center;
+                    font-size: 17px;
+                    border: 1px solid rgba(50, 57, 68, 0.3);
+                }
+            }
+        }
+        .header__categoryMenu{
+            @media (min-width: 768px) {
+                display: flex;
+            }
+            width: 100%;
+            height: 57px;
+            display: none;
+            align-items: center;
+            text-align: center;
+            padding: 2px;
+            .category__item{
+                width: 18%;
+                font-size: 11px;
+            }
+        }
+        .nav__subMenu{
+            background-color: #F2F3F4;
+            border: variables.$border;
+            @media (min-width: 768px) {
+                display: flex;
+            }
+            width: 100%;
+            height: 57px;
+            display: none;
+            font-family: variables.$font2, 'regular';
+            align-items: center;
+            // text-align: center;
+            // padding: 2px;
+            .subMenu__item{
+                margin-left: 30px;
+                // width: 18%;
+                font-size: 11px;
+            }
+        }
+        .menuBar {
+            font-family: variables.$font2;
+            text-transform: uppercase;
+            z-index: 20;
+    
+            .menuBar__stickyBottom {
+                @media (min-width: 768px) {
+                    // display: none;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 70px;
+                    display: flex;
+                    justify-content: end;
+                    background-color: transparent;
+                    font-size: 12px;
+                    border: 0;
+                    width: 100%;
+                    font-family: variables.$font;
+                }
+                position: fixed;
+                @include usage.centering;
+                align-content: flex-start;
+                bottom: 0;
+                width: 100%;
+                background-color: white;
+                font-size: 13px;
+                border: variables.$border;
+                z-index: 20;
+                left: 0;
+            }
+            .box__menu {
+                @media (min-width: 768px) {
+                    display: flex;
+                    border: 0;
+                    width: 12%;
+                }
+                
+                @include usage.centering;
+                width: 20%;
+                height: 50px;
+                border-right: variables.$border;
+                text-align: center;
+                transition: 0.3s;
+                a{
+                    @media (min-width: 768px) {
+                        flex-direction: row;
+                        column-gap: 10px;
+                    }
+                    display: flex;
+                    flex-direction: column;
+                }
+                i{
+                    @media (min-width: 768px) {
+                        font-size: 20px;
+                        
+                    }
+                }
+                span{
+                    @media (min-width: 768px) {
+                        height: 15px;
+                        margin-top: 5px;
+                    }
+                }
+                
+                }
+                .box__menu--none{
+                    @media (min-width: 768px) {
+                        display: none;
+                    }
+                }
+                .box__item {
+                    font-size: 13px;
+                    padding: 3px;
+                    margin-bottom: -4px;
+                }
+            
+    
+            .shopping__cart {
+                border: 0;
+            }
+        }
+    }
+        @include hamburger.hamburger;
+        
+}
