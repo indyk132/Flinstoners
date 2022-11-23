@@ -1,0 +1,57 @@
+@use "../css/icons.css";
+@use "../css/fonts.css";
+@use "./Variables" as variables;
+@use "./usageMix" as usage;
+@use "./slider.scss" as slider;
+@use "./header2.scss" as headerMix;
+@use "./plugNav.scss" as plugNav;
+@use "./productsBanner.scss" as productsBanner;
+@use "./footer.scss" as footer;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	a {
+		text-decoration: none;
+		color: black;
+	}
+}
+.container {
+	margin: 0 auto;
+	max-width: 1920px;
+	height: 100%;
+	padding: 0 15px;
+}
+
+@include headerMix.headerMix;
+
+// @include hamburger.hamburger;
+
+main {
+	width: 100%;
+	background-color: #f2f3f4;
+	@include plugNav.plug;
+	@include slider.slider;
+	@include productsBanner.productsBanner;
+
+}
+
+
+@include footer.footer;
+.onclick-switch {
+	opacity: 1;
+	transform: translatex(800px);
+	z-index: 10;
+}
+.bulb__mover--right {
+	transform: translateX(75%);
+	transition: 1s;
+}
+.bulb__mover--left {
+	transform: translateX(-1050px);
+	transition: 1s;
+}
