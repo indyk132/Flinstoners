@@ -820,7 +820,8 @@ footer .footer__container {
 }
 @media (min-width: 768px) {
   footer .footer__container {
-    height: 550px;
+    display: flex;
+    flex-direction: column;
   }
 }
 footer .footer__containerList {
