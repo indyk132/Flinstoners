@@ -76,23 +76,6 @@
                 align-items: center;
                 border-bottom: variables.$border;
                 font-family: variables.$font2;
-                .products__ExpanderArrow {
-                    position: fixed;
-                    left: 0;
-                    width: 100%;
-                    display: flex;
-                    justify-content: end;
-                    .expander__arrow {
-                        position: fixed;
-                        top: 29%;
-                        padding: 10px;
-                        border-left: variables.$border;
-                        .icon-icon_04 {
-                            background-color: #ffffff;
-                            border: 0;
-                        }
-                    }
-                }
             }
         }
         .hamburger__language {

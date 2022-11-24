@@ -6,7 +6,8 @@
     footer {
         .footer__container {
             @media (min-width: 768px) {
-                height: 550px;
+                display: flex;
+                flex-direction: column;
             }
             position: relative;
             width: 100%;
