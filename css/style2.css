@@ -380,13 +380,14 @@ main .section__nav {
   display: flex;
   flex-direction: row;
 }
+main .section__nav .nav__categoryMenu {
+  max-width: 300px;
+}
 main .section__nav .nav__categoryMenu .products__brand {
-  width: 50%;
   border: 1px solid #e1e2e3;
 }
 main .section__nav .nav__categoryMenu .products__brand .plugs {
-  display: inline-block;
-  padding: 15px 125px 15px 10px;
+  padding: 15px 10px;
   border: 1px solid #e1e2e3;
   border-bottom: 3px solid red;
   font-weight: bold;
@@ -395,10 +396,10 @@ main .section__nav .nav__categoryMenu .products__brand .bands {
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 main .section__nav .nav__categoryMenu .products__brand .bands .bands__item {
-  padding: 15px 125px 15px 10px;
+  padding: 13px 10px;
   border: 1px solid #e1e2e3;
   display: flex;
 }
@@ -407,22 +408,80 @@ main .section__nav .nav__categoryMenu .products__filters {
   border: 1px solid #e1e2e3;
 }
 main .section__nav .nav__categoryMenu .products__filters .filters {
-  padding: 15px 125px 15px 10px;
-  border: 1px solid #e1e2e3;
+  padding: 15px 10px;
   border-bottom: 3px solid red;
   font-weight: bold;
 }
-main .section__nav .nav__categoryMenu .products__filters .bands {
-  padding: 15px 125px 15px 10px;
+main .section__nav .nav__categoryMenu .products__filters .filters__parameter {
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
-main .section__nav .nav__categoryMenu .products__filters .bands .bands__item {
-  padding: 15px 125px 15px 10px;
-  border: 1px solid #e1e2e3;
+main .section__nav .nav__categoryMenu .products__filters .filters__parameter .filters__item {
+  padding: 13px 10px;
   display: flex;
+}
+main .section__nav .nav__categoryMenu .products__producers {
+  border: 1px solid #e1e2e3;
+}
+main .section__nav .nav__categoryMenu .products__producers .producers {
+  padding: 15px 10px;
+  border-bottom: 3px solid red;
+  font-weight: bold;
+}
+main .section__nav .nav__categoryMenu .products__producers .producers__parameter {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+main .section__nav .nav__categoryMenu .products__producers .producers__parameter .producers__item {
+  padding: 13px 10px;
+  display: flex;
+}
+main .section__nav .nav__categoryMenu .products__color {
+  border: 1px solid #e1e2e3;
+}
+main .section__nav .nav__categoryMenu .products__color .color__title {
+  padding: 15px 10px;
+  border-bottom: 3px solid red;
+  font-weight: bold;
+}
+main .section__nav .nav__categoryMenu .products__color .color__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+main .section__nav .nav__categoryMenu .products__color .color__list .color__item {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  margin: 5px 5px;
+}
+main .section__nav .nav__categoryMenu .products__filterSize {
+  border: 1px solid #e1e2e3;
+}
+main .section__nav .nav__categoryMenu .products__filterSize .filterSize__title {
+  padding: 15px 10px;
+  border-bottom: 3px solid red;
+  font-weight: bold;
+}
+main .section__nav .nav__categoryMenu .products__filterSize .filterSize__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+main .section__nav .nav__categoryMenu .products__filterSize .filterSize__list .filterSize__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 35px;
+  margin: 5px 5px;
+  border: 1px solid #e1e2e3;
 }
 main .main__swiper {
   width: 100%;
@@ -632,7 +691,6 @@ main .main__productsBanner .products__container .products__sliderBulbs .products
 footer .footer__container {
   position: relative;
   width: 100%;
-  height: 1350px;
   background-color: #393e40;
   bottom: 0;
 }
@@ -643,7 +701,6 @@ footer .footer__container {
 }
 footer .footer__containerList {
   width: 100%;
-  height: 330px;
   font-size: 14px;
   color: #ffffff;
 }
@@ -658,7 +715,6 @@ footer .footer__containerList .list__element {
 @media (min-width: 768px) {
   footer .footer__containerList .list__element {
     width: 25%;
-    height: 320px;
   }
 }
 footer .footer__containerList .list__element .information__heading {
@@ -705,7 +761,6 @@ footer .footer__containerList .list__element .information__heading::after {
 }
 footer .footer__containerList .list__element .item__listContainer {
   width: 100%;
-  height: 0px;
   padding-top: 20px;
   padding-bottom: 20px;
   display: none;
@@ -734,13 +789,11 @@ footer .footer__containerList .list__element .height__switch {
   display: flex;
 }
 footer .footer__copyright {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   bottom: 0;
   width: 100%;
-  height: 100px;
   background-color: #ffffff;
   margin-bottom: 70px;
   padding: 30px 15px 30px;
@@ -750,7 +803,8 @@ footer .footer__copyright {
   footer .footer__copyright {
     margin: 0;
     flex-direction: row;
-    height: 10px;
+    display: flex;
+    justify-content: space-between;
   }
 }
 footer .footer__copyright .cpright__element {
