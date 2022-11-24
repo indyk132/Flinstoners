@@ -442,6 +442,7 @@ main .section__nav .nav__categoryMenu .products__color .color__list .color__item
   height: 40px;
   width: 40px;
   margin: 5px 5px;
+  cursor: pointer;
 }
 main .section__nav .nav__categoryMenu .products__filterSize {
   border: 1px solid #e1e2e3;
@@ -465,6 +466,67 @@ main .section__nav .nav__categoryMenu .products__filterSize .filterSize__list .f
   width: 35px;
   margin: 5px 5px;
   border: 1px solid #e1e2e3;
+}
+main .section__nav .nav__categoryMenu .products__filterChoose {
+  border: 1px solid #e1e2e3;
+}
+main .section__nav .nav__categoryMenu .products__filterChoose .filterChoose__title {
+  padding: 15px 10px;
+  border-bottom: 3px solid red;
+  font-weight: bold;
+}
+main .section__nav .nav__categoryMenu .products__filterChoose .filterChoose__list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+main .section__nav .nav__categoryMenu .products__filterChoose .filterChoose__list .filterChoose__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 35px;
+  padding: 20px 50px;
+  margin: 5px 5px;
+  border: 1px solid #e1e2e3;
+}
+main .section__nav .nav__categoryMenu .products__filterChoose .filterChoose__list .filterChoose__item--dash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 35px;
+  margin: 10px 5px;
+}
+main .section__nav .nav__categoryMenu .products__price {
+  border: 1px solid #e1e2e3;
+}
+main .section__nav .nav__categoryMenu .products__price .price__title {
+  padding: 15px 10px;
+  border-bottom: 3px solid red;
+  font-weight: bold;
+}
+main .section__nav .nav__categoryMenu .products__price .price__list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+main .section__nav .nav__categoryMenu .products__price .price__list .price__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 35px;
+  padding: 20px;
+  margin: 5px 5px;
+  border: 1px solid #e1e2e3;
+}
+main .section__nav .nav__categoryMenu .products__price .price__list .price__item--input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 5px 5px;
 }
 main .main__swiper {
   width: 100%;
