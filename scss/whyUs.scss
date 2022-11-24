@@ -7,99 +7,106 @@
         .WhyUs__photo {
             position: relative;
             width: 100%;
-            height: 550px;
-            margin-top: 10%;
+            height: 450px;
+            margin-top: 7%;
             background-image: url(/photos/img_07.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: 50%;
+            @media (min-width: 768px) {
+                height: 550px;
+            }
         }
         
         .WhyUs__photo::before {
-            content: "";
             position: absolute;
             top: 0px;
             right: 0px;
             bottom: 0px;
             left: 0px;
-            background-color: rgba(0,0,0,0.30);
+            content: "";
+            background-color: rgba(0,0,0,0.50);
         }
     
         .WhyUs__text--field {
             position: relative;
-            margin-left: 10%;
-            height: 10%;
-            margin-bottom: 2%;
+            height: 13%;
             width: 80%;
+            margin-left: 10%;
+            margin-bottom: 2%;
             overflow: hidden;
 
             p.bold {
-                @include usage.centering();
                 margin-top: 3%;
-                font-weight: bold;
+                @include usage.centering();
+                font-family: variables.$font;
                 font-size: 25px;
-                font-family: variables.$font2;
-                color: #fff;
                 text-align: center;
-                @media (min-width: 768px) {
-                    margin-top: 4%;
+                color: #fff;
+            }
+
+            @media (min-width: 768px) {
+                height: 18%;
+                p.bold {
+                    margin-top: 5%;
                     margin-bottom: 3%;
                     font-size: 44px;
                 }
-            }
-            @media (min-width: 768px) {
-                height: 16%;
             }
         }
 
         .WhyUs__second--field {
             position: relative;
             margin-top: 5%;
+
             p {
                 @include usage.centering();
                 font-family: variables.$font2;
-                color: #fff;
                 font-size: 18px;
                 text-align: center;
+                letter-spacing: -0.36px;
+                color: #fff;
             }
+
             @media (min-width: 768px) {
                 width: 65%;
-                margin-left: 17.5%;
                 margin-top: 3%;
+                margin-left: 17.5%;
             }
         }
     
         .WhyUs__border--container {
             @include usage.centering();
+
+            .WhyUs__border--text {
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                opacity: 10%;
+                z-index: 1;
+            }
+        
+            .WhyUs__border--rectangle {
+                width: 12%;
+                height: 3px;
+                margin-bottom: 2.5px;
+                background-color: #F74137;
+                z-index: 1;
+            }
         }
     
-        .WhyUs__border--text {
-            height: 2px;
-            width: 100%;
-            background-color: #fff;
-            opacity: 40%;
-            z-index: 10;
-          }
-    
-          .WhyUs__border--rectangle {
-            width: 12%;
-            height: 3px;
-            margin-bottom: 2.5px;
-            background-color: #F74137;
-            z-index: 1;
-          }
     
         .WhyUs__icons--container {
-            margin-top: 2%;
-            height: 19%;
             width: 100%;
+            height: 19%;
+            max-width: 60%;
+            margin-top: 2%;
+	        margin-left: 20%;
             display: flex;
             justify-content: space-evenly;
-            align-items: center;
             font-family: variables.$font2;
-            max-width: 60%;
-	        margin-left: 20%;
+            align-items: center;
 	        gap: 5px;
 
             @media (min-width: 768px) {
@@ -107,31 +114,33 @@
                 margin-top: 3%;
                 gap: 25px;
             }
-        }
+
+            .WhyUs__icon {
+                width: 100%;
+                height: 100%;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                z-index: 1;
+                gap: 10px;
     
-        .WhyUs__icon {
-            width: 150px;
-            height: 100px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            z-index: 10;
-            gap: 10px;
-            @media (min-width: 768px) {
-                width: 250px;
-                height: 140px;
+                @media (min-width: 768px) {
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
+    
     
         .WhyUs__btn--container {
             @include usage.centering();
     
             a {
-                z-index: 1;
                 margin-top: 10%;
+                z-index: 1;
             }
 
             @media (min-width: 768px) {
@@ -139,18 +148,20 @@
                     margin-top: 2%;
                 }
             }
+
+            .WhyUs__company--info {
+                width: 230px;
+                height: 55px;
+                border: none;
+                font-family: variables.$font;
+                font-size: 14px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #fff;
+                background-color: #f74137;
+                cursor: pointer;
+            }
         }
     
-        .WhyUs__company--info {
-            width: 230px;
-            height: 50px;
-            background-color: #f74137;
-            border: none;
-            text-align: center;
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 12px;
-            cursor: pointer;
-        }
     }
 }
