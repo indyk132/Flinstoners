@@ -693,14 +693,13 @@ main .WhyUs .WhyUs__photo::before {
 }
 main .WhyUs .WhyUs__text--field {
   position: relative;
-  height: 13%;
+  height: 17%;
   width: 80%;
   margin-left: 10%;
-  margin-bottom: 2%;
   overflow: hidden;
 }
 main .WhyUs .WhyUs__text--field p.bold {
-  margin-top: 3%;
+  margin-top: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -709,13 +708,17 @@ main .WhyUs .WhyUs__text--field p.bold {
   text-align: center;
   color: #fff;
 }
+@media (min-width: 370px) {
+  main .WhyUs .WhyUs__text--field p.bold {
+    margin-top: 35px;
+  }
+}
 @media (min-width: 768px) {
   main .WhyUs .WhyUs__text--field {
-    height: 18%;
+    height: 20%;
   }
   main .WhyUs .WhyUs__text--field p.bold {
-    margin-top: 5%;
-    margin-bottom: 3%;
+    margin-top: 50px;
     font-size: 44px;
   }
 }
@@ -735,9 +738,18 @@ main .WhyUs .WhyUs__second--field p {
 }
 @media (min-width: 768px) {
   main .WhyUs .WhyUs__second--field {
-    width: 65%;
-    margin-top: 3%;
-    margin-left: 17.5%;
+    height: 82px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 15%;
+    max-width: 75%;
+    line-height: 25px;
+  }
+}
+@media (min-width: 1285px) {
+  main .WhyUs .WhyUs__second--field {
+    max-width: 60%;
+    margin-left: 20.5%;
   }
 }
 main .WhyUs .WhyUs__border--container {
@@ -761,21 +773,29 @@ main .WhyUs .WhyUs__border--container .WhyUs__border--rectangle {
 }
 main .WhyUs .WhyUs__icons--container {
   width: 100%;
-  height: 19%;
-  max-width: 60%;
-  margin-top: 2%;
-  margin-left: 20%;
-  display: flex;
-  justify-content: space-evenly;
+  height: 20%;
+  margin-top: 3%;
+  margin-left: 40%;
   font-family: Metropolis, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 20px;
+  width: 20%;
 }
 @media (min-width: 768px) {
   main .WhyUs .WhyUs__icons--container {
     height: 27%;
-    margin-top: 3%;
+    width: 100%;
+    max-width: 65%;
     gap: 25px;
+    margin-left: 17.5%;
+    margin-top: -5px;
+  }
+}
+@media (min-width: 1380px) {
+  main .WhyUs .WhyUs__icons--container {
+    margin-top: -25px;
   }
 }
 main .WhyUs .WhyUs__icons--container .WhyUs__icon {
@@ -788,12 +808,13 @@ main .WhyUs .WhyUs__icons--container .WhyUs__icon {
   justify-content: center;
   color: #fff;
   z-index: 1;
-  gap: 10px;
 }
 @media (min-width: 768px) {
   main .WhyUs .WhyUs__icons--container .WhyUs__icon {
-    width: 100%;
-    height: 100%;
+    width: 310px;
+    height: 153px;
+    gap: 10px;
+    margin-left: 5px;
   }
 }
 main .WhyUs .WhyUs__btn--container {
@@ -802,12 +823,12 @@ main .WhyUs .WhyUs__btn--container {
   align-items: center;
 }
 main .WhyUs .WhyUs__btn--container a {
-  margin-top: 10%;
+  margin-top: 20px;
   z-index: 1;
 }
 @media (min-width: 768px) {
   main .WhyUs .WhyUs__btn--container a {
-    margin-top: 2%;
+    margin-top: 25px;
   }
 }
 main .WhyUs .WhyUs__btn--container .WhyUs__company--info {
